@@ -1,1 +1,1 @@
-# Algoritmos, curso da universidade de Princeton
+# Algoritmos, curso da Universidade de Princeton
