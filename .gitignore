@@ -13,3 +13,4 @@ buildNumber.properties
 ####
 
 src/main/resources/*
+!src/main/resources/
