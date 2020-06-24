@@ -14,5 +14,5 @@ public abstract class DisjointSet {
 
   abstract protected int find(int p);
 
-  abstract protected void union(int p, int q);
+  abstract public void union(int p, int q);
 }

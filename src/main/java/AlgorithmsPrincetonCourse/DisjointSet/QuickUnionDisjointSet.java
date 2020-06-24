@@ -13,10 +13,6 @@ public class QuickUnionDisjointSet extends DisjointSet {
     }
   }
   
-  public boolean connected(int p, int q) {
-    return find(p) == find(q);
-  }
-
   public void union(int p, int q) {
     int pRoot = find(p);
     int qRoot = find(q);
@@ -30,12 +26,10 @@ public class QuickUnionDisjointSet extends DisjointSet {
   }
   
   protected int find(int p) {
-    int pParent = id[p];
-    
-    while (pParent != id[pParent]) {
-      pParent = id[pParent];
+    while (p != id[p]) {
+      p = id[p];
     }
-    
-    return pParent;
+
+    return p;
   }
 }
