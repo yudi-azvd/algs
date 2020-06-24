@@ -3,10 +3,10 @@ package AlgorithmsPrincetonCourse.DisjointSet;
 /**
  * União rápida (abordagem preguiçosa)
  */
-public class WeightedQuickUnionDisjointSet extends DisjointSet {
+public class WeightedQuickUnionDisjointSetWithCompression extends DisjointSet {
   int[] height;
 
-  public WeightedQuickUnionDisjointSet(int size) {
+  public WeightedQuickUnionDisjointSetWithCompression(int size) {
     id = new int[size];
     height = new int[size];
     count = size;
@@ -37,7 +37,7 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
     }
     else {
       id[qRoot] = pRoot;
-      height[qRoot] += height[pRoot];
+      height[qRoot] +=height[pRoot];
     }
 
     count--;
@@ -45,6 +45,7 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
 
   protected int find(int p) {
     while (p != id[p]) {
+      id[p] = id[id[p]];
       p = id[p];
     }
 
