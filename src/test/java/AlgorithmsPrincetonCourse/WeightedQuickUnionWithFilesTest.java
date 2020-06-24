@@ -72,7 +72,6 @@ public class WeightedQuickUnionWithFilesTest {
   public void largeUF() {
     InputStream inputStream = getInputFrom("algs4-data/largeUF.txt");
   
-    // Scanner scanner = new Scanner(file);
     Scanner scanner = new Scanner(inputStream);
 
     int setSize = scanner.nextInt();

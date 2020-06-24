@@ -13,9 +13,6 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
 
     for (int i = 0; i < id.length; ++i) {
       id[i] = i;
-    }
-
-    for (int i = 0; i < id.length; ++i) {
       size[i] = 1;
     }
   }

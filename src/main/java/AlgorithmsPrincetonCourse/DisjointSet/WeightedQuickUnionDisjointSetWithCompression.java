@@ -13,10 +13,7 @@ public class WeightedQuickUnionDisjointSetWithCompression extends DisjointSet {
 
     for (int i = 0; i < id.length; ++i) {
       id[i] = i;
-    }
-
-    for (int i = 0; i < id.length; ++i) {
-      size[i] = 1;
+      size[i] = 0;
     }
   }
 
@@ -33,11 +30,13 @@ public class WeightedQuickUnionDisjointSetWithCompression extends DisjointSet {
 
     if (pTreeSize < qTreeSize) {
       id[pRoot] = qRoot;
-      size[qRoot] += pTreeSize;
+    }
+    else if (pTreeSize > qTreeSize) {
+      id[qRoot] = pRoot;
     }
     else {
       id[qRoot] = pRoot;
-      size[pRoot] += qTreeSize;
+      size[pRoot]++;
     }
 
     count--;
