@@ -4,19 +4,19 @@ package AlgorithmsPrincetonCourse.DisjointSet;
  * União rápida (abordagem preguiçosa)
  */
 public class WeightedQuickUnionDisjointSetWithCompression extends DisjointSet {
-  int[] height;
+  int[] size;
 
-  public WeightedQuickUnionDisjointSetWithCompression(int size) {
-    id = new int[size];
-    height = new int[size];
-    count = size;
+  public WeightedQuickUnionDisjointSetWithCompression(int n) {
+    id = new int[n];
+    size = new int[n];
+    count = n;
 
     for (int i = 0; i < id.length; ++i) {
       id[i] = i;
     }
 
     for (int i = 0; i < id.length; ++i) {
-      height[i] = 1;
+      size[i] = 1;
     }
   }
 
@@ -24,20 +24,20 @@ public class WeightedQuickUnionDisjointSetWithCompression extends DisjointSet {
     int pRoot = find(p);
     int qRoot = find(q);
 
-    int pHeight = height[pRoot];
-    int qHeight = height[qRoot];
+    int pTreeSize = size[pRoot];
+    int qTreeSize = size[qRoot];
 
     if (pRoot == qRoot) {
       return;
     }
 
-    if (pHeight < qHeight) {
+    if (pTreeSize < qTreeSize) {
       id[pRoot] = qRoot;
-      height[qRoot] += height[pRoot];
+      size[qRoot] += pTreeSize;
     }
     else {
       id[qRoot] = pRoot;
-      height[qRoot] +=height[pRoot];
+      size[pRoot] += qTreeSize;
     }
 
     count--;
