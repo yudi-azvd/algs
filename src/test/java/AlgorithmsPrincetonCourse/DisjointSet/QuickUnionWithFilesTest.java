@@ -1,15 +1,21 @@
-package AlgorithmsPrincetonCourse;
+package AlgorithmsPrincetonCourse.DisjointSet;
 
 import java.io.InputStream;
 import java.util.Scanner;
 
 import org.junit.Test;
 
-import AlgorithmsPrincetonCourse.DisjointSet.WeightedQuickUnionDisjointSet;
+
 import Utils.Stopwatch;
 
+/**
+ * QuickFind
+ * QuickUnion
+ * WeigthedQuickUnion
+ * WeigthedQuickUnionWithCompression
+ */
 
-public class WeightedQuickUnionWithFilesTest {
+public class QuickUnionWithFilesTest {
   private InputStream getInputFrom(String filename) {
     return getClass().getClassLoader().getResourceAsStream(filename);
   }
@@ -23,7 +29,7 @@ public class WeightedQuickUnionWithFilesTest {
 
     int setSize = scanner.nextInt();
 
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
     
     Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
@@ -50,7 +56,7 @@ public class WeightedQuickUnionWithFilesTest {
 
     int setSize = scanner.nextInt();
 
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
     
     Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
@@ -72,13 +78,13 @@ public class WeightedQuickUnionWithFilesTest {
   public void largeUF() {
     InputStream inputStream = getInputFrom("algs4-data/largeUF.txt");
   
+    // Scanner scanner = new Scanner(file);
     Scanner scanner = new Scanner(inputStream);
 
     int setSize = scanner.nextInt();
 
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
 
-    Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
       int p = scanner.nextInt();
       int q = scanner.nextInt();
@@ -89,7 +95,7 @@ public class WeightedQuickUnionWithFilesTest {
       set.union(p, q);
       // System.out.println(p + " " + q);
     }
-    System.out.println(timer.elapsedTime());
+
     scanner.close();
   }
 }

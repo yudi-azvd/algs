@@ -1,11 +1,11 @@
-package AlgorithmsPrincetonCourse;
+package AlgorithmsPrincetonCourse.DisjointSet;
 
 import java.io.InputStream;
 import java.util.Scanner;
 
 import org.junit.Test;
 
-import AlgorithmsPrincetonCourse.DisjointSet.WeightedQuickUnionDisjointSetWithCompression;
+
 import Utils.Stopwatch;
 
 

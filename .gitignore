@@ -12,5 +12,6 @@ buildNumber.properties
 
 ####
 
+course-slides/
 src/main/resources/*
 !src/main/resources/.gitkeep

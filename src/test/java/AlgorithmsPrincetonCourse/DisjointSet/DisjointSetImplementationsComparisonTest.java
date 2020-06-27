@@ -1,13 +1,12 @@
-// package AlgorithmsPrincetonCourse;
+// package AlgorithmsPrincetonCourse.DisjointSet;
 
 // import java.io.InputStream;
 // import java.util.Scanner;
 
 // import org.junit.Test;
 
-// import AlgorithmsPrincetonCourse.DisjointSet.DisjointSet;
-// import AlgorithmsPrincetonCourse.DisjointSet.QuickFindDisjointSet;
-
+// 
+// 
 // /**
 //  * QuickFind
 //  * QuickUnion

@@ -1,21 +1,14 @@
-package AlgorithmsPrincetonCourse;
+package AlgorithmsPrincetonCourse.DisjointSet;
 
 import java.io.InputStream;
 import java.util.Scanner;
 
 import org.junit.Test;
 
-import AlgorithmsPrincetonCourse.DisjointSet.QuickUnionDisjointSet;
 import Utils.Stopwatch;
 
-/**
- * QuickFind
- * QuickUnion
- * WeigthedQuickUnion
- * WeigthedQuickUnionWithCompression
- */
 
-public class QuickUnionWithFilesTest {
+public class WeightedQuickUnionWithFilesTest {
   private InputStream getInputFrom(String filename) {
     return getClass().getClassLoader().getResourceAsStream(filename);
   }
@@ -29,7 +22,7 @@ public class QuickUnionWithFilesTest {
 
     int setSize = scanner.nextInt();
 
-    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
+    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
     
     Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
@@ -56,7 +49,7 @@ public class QuickUnionWithFilesTest {
 
     int setSize = scanner.nextInt();
 
-    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
+    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
     
     Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
@@ -78,13 +71,13 @@ public class QuickUnionWithFilesTest {
   public void largeUF() {
     InputStream inputStream = getInputFrom("algs4-data/largeUF.txt");
   
-    // Scanner scanner = new Scanner(file);
     Scanner scanner = new Scanner(inputStream);
 
     int setSize = scanner.nextInt();
 
-    QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
+    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(setSize);
 
+    Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
       int p = scanner.nextInt();
       int q = scanner.nextInt();
@@ -95,7 +88,7 @@ public class QuickUnionWithFilesTest {
       set.union(p, q);
       // System.out.println(p + " " + q);
     }
-
+    System.out.println(timer.elapsedTime());
     scanner.close();
   }
 }

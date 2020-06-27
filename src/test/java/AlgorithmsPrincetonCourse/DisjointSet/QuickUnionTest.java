@@ -1,16 +1,16 @@
-package AlgorithmsPrincetonCourse;
+package AlgorithmsPrincetonCourse.DisjointSet;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import AlgorithmsPrincetonCourse.DisjointSet.WeightedQuickUnionDisjointSet;
 
-public class WeightedQuickUnionTest {
+
+public class QuickUnionTest {
   @Test
   public void connections_should_be_reflexive() {
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(2);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(2);
 
     assertTrue(set.connected(1, 1));
     assertTrue(set.connected(0, 0));
@@ -19,7 +19,7 @@ public class WeightedQuickUnionTest {
 
   @Test
   public void connections_should_be_symmetric() {
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(4);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(4);
 
     set.union(1, 3);
 
@@ -30,7 +30,7 @@ public class WeightedQuickUnionTest {
 
   @Test
   public void should_be_able_to_unify_connected_groups() {
-    WeightedQuickUnionDisjointSet set = new WeightedQuickUnionDisjointSet(10);
+    QuickUnionDisjointSet set = new QuickUnionDisjointSet(10);
 
     // grupo 1
     set.union(0, 5);

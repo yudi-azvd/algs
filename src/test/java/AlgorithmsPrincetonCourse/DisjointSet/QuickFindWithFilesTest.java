@@ -1,4 +1,4 @@
-package AlgorithmsPrincetonCourse;
+package AlgorithmsPrincetonCourse.DisjointSet;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-import AlgorithmsPrincetonCourse.DisjointSet.QuickFindDisjointSet;
 import Utils.Stopwatch;
 
 public class QuickFindWithFilesTest {
