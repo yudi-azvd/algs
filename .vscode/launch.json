@@ -6,9 +6,16 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - PercolationVisualizer",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.percolation.PercolationVisualizer",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Debug (Launch) - Current File",
       "request": "launch",
       "mainClass": "${file}"
-    } 
+    }
   ]
 }

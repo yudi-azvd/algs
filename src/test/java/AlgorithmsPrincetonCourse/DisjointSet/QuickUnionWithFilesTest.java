@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-
-import Utils.Stopwatch;
+import edu.princeton.cs.algs4.Stopwatch;
 
 /**
  * QuickFind
@@ -30,7 +29,7 @@ public class QuickUnionWithFilesTest {
     int setSize = scanner.nextInt();
 
     QuickUnionDisjointSet set = new QuickUnionDisjointSet(setSize);
-    
+
     Stopwatch timer = new Stopwatch();
     while (scanner.hasNextInt()) {
       int p = scanner.nextInt();

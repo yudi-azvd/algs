@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-import Utils.Stopwatch;
+import edu.princeton.cs.algs4.Stopwatch;
+
 
 public class QuickFindWithFilesTest {
   private InputStream getInputFrom(String filename) {
