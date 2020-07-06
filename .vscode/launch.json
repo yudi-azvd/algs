@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Example1",
+      "request": "launch",
+      "mainClass": "DrawExamples.Example1",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - QFAmortizedCostPlot",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.CreativeProblems.QFAmortizedCostPlot",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Example3",
+      "request": "launch",
+      "mainClass": "DrawExamples.Example3",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Example2",
+      "request": "launch",
+      "mainClass": "DrawExamples.Example2",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Test2",
+      "request": "launch",
+      "mainClass": "DrawTest.Test2",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Test1",
+      "request": "launch",
+      "mainClass": "DrawTest.Test1",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - PercolationVisualizer",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.percolation.PercolationVisualizer",

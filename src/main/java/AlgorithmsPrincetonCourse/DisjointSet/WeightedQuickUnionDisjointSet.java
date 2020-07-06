@@ -5,11 +5,15 @@ package AlgorithmsPrincetonCourse.DisjointSet;
  */
 public class WeightedQuickUnionDisjointSet extends DisjointSet {
   int[] size;
+  int cost;
+  int total;
 
   public WeightedQuickUnionDisjointSet(int n) {
     id = new int[n];
     size = new int[n];
     count = n;
+    cost = 0;
+    total = 0;
 
     for (int i = 0; i < id.length; ++i) {
       id[i] = i;
@@ -21,8 +25,12 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
     int pRoot = find(p);
     int qRoot = find(q);
 
+    int cost = 0;
+
     int pTreeSize = size[pRoot];
     int qTreeSize = size[qRoot];
+
+    cost += 2;
 
     if (pRoot == qRoot) {
       return;
@@ -31,13 +39,17 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
     if (pTreeSize < qTreeSize) {
       id[pRoot] = qRoot;
       size[qRoot] += pTreeSize;
+      cost += 3;
     }
     else {
       id[qRoot] = pRoot;
       size[pRoot] += qTreeSize;
+      cost += 3;
     }
 
     count--;
+    this.cost = cost;
+    this.total += cost;
   }
 
   protected int find(int p) {
@@ -46,5 +58,13 @@ public class WeightedQuickUnionDisjointSet extends DisjointSet {
     }
 
     return p;
+  }
+
+  public int getCost() {
+    return cost;
+  }
+
+  public int getTotal() {
+    return total;
   }
 }

@@ -6,7 +6,7 @@
  *  Description:  Modeling Percolation using an N-by-N grid and Union-Find data
  *                structures to determine the threshold.
  ******************************************************************************/
-package AlgorithmsPrincetonCourse.percolation;
+package AlgorithmsPrincetonCourse.Assignments.percolation;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -16,7 +16,8 @@ public class Percolation {
   private boolean[][] grid; // N-by-N grid
   private WeightedQuickUnionUF unionFind; // disjoint set representing the
                                           // connection in the N-by-N grid.
-  // private WeightedQuickUnionUF unionFindOpenSites // ?
+  // private WeightedQuickUnionUF unionFindOpenSites; // ?
+  // private WeightedQuickUnionUF unionFindFullSites; // ?
 
   // creates n-by-n grid, with all sites initially blocked
   public Percolation(int n) {

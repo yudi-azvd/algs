@@ -6,7 +6,7 @@
  *  Description:  Class to compute statistics of a series of percolation
  *                simulations.
  ******************************************************************************/
-package AlgorithmsPrincetonCourse.percolation;
+package AlgorithmsPrincetonCourse.Assignments.percolation;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
