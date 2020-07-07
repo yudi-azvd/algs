@@ -6,16 +6,37 @@
   "configurations": [
     {
       "type": "java",
-      "name": "CodeLens (Launch) - Example1",
+      "name": "CodeLens (Launch) - ErdosRenyiModel",
       "request": "launch",
-      "mainClass": "DrawExamples.Example1",
+      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.Experiments.ErdosRenyiModel",
       "projectName": "AlgorithmsPrincetonCourse"
     },
     {
       "type": "java",
-      "name": "CodeLens (Launch) - QFAmortizedCostPlot",
+      "name": "CodeLens (Launch) - ErdosRenyiExperiment",
       "request": "launch",
-      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.CreativeProblems.QFAmortizedCostPlot",
+      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.Experiments.ErdosRenyiExperiment",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - AmortizedCostPlots",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.CreativeProblems.AmortizedCostPlots",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ErdosRenyi",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.CreativeProblems.ErdosRenyi",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Example1",
+      "request": "launch",
+      "mainClass": "DrawExamples.Example1",
       "projectName": "AlgorithmsPrincetonCourse"
     },
     {

@@ -6,9 +6,9 @@ import AlgorithmsPrincetonCourse.DisjointSet.WeightedQuickUnionDisjointSet;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
-public class QFAmortizedCostPlot {
+public class AmortizedCostPlots {
   public static void main(String[] args) {
-    plot_qf();
+    // plot_qf();
     // plot_qu();
     plot_wqu();
   }
