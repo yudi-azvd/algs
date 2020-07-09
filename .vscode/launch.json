@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - FixedCapacityStackOfStrings",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Stack.FixedCapacityStackOfStrings",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - LinkedListStackOfStrings",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Stack.LinkedListStackOfStrings",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - ErdosRenyiModel",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.DisjointSet.Experiments.ErdosRenyiModel",
