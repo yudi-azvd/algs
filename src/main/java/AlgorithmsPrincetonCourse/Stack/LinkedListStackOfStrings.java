@@ -1,8 +1,6 @@
 package AlgorithmsPrincetonCourse.Stack;
 
-import edu.princeton.cs.algs4.In;
-
-public class LinkedListStackOfStrings {
+public class LinkedListStackOfStrings implements IStackOfStrings {
   Node first = null;
 
   private class Node {
@@ -26,41 +24,5 @@ public class LinkedListStackOfStrings {
 
   public boolean isEmpty() {
     return first == null;
-  }
-
-  public static void main(String[] args) {
-    readTxt();
-    // randomTest();
-  }
-
-  public static void randomTest() {
-    LinkedListStackOfStrings stack = new LinkedListStackOfStrings();
-
-    stack.push("1");
-    stack.push("2");
-    stack.push("3");
-    stack.push("4");
-
-    System.out.println(stack.pop());
-    System.out.println(stack.pop());
-    System.out.println(stack.pop());
-    System.out.println(stack.pop());
-  }
-
-  public static void readTxt() {
-    In in = new In("algs4-data/tobe.txt");
-
-    LinkedListStackOfStrings stack = new LinkedListStackOfStrings();
-
-    while (!in.isEmpty()) {
-      String s = in.readString();
-
-      if (s.equals("-")) {
-        System.out.println(stack.pop());
-      }
-      else {
-        stack.push(s);
-      }
-    }
   }
 }

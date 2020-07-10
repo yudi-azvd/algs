@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Stack.Main",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - FixedCapacityStackOfStrings",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Stack.FixedCapacityStackOfStrings",
