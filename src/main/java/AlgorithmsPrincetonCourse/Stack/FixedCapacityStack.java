@@ -1,15 +1,15 @@
 package AlgorithmsPrincetonCourse.Stack;
 
-public class ResizingArrayStackOfStrings implements IStackOfStrings {
+public class FixedCapacityStack<Item> implements IStack<Item> {
   private int size = 0;
   private int capacity = 1;
-  private String[] stack = new String[capacity];
+  private Item[] stack = (Item[]) new Object[capacity];
 
-  public void push(String item) {
+  public void push(Item item) {
     if (size == capacity) {
-      // String[] tmp = new String[capacity];
+      // Item[] tmp = new Item[capacity];
       // System.arraycopy(stack, 0, tmp, 0, capacity);
-      // stack = new String[capacity*2];
+      // stack = new Item[capacity*2];
       // System.arraycopy(tmp, 0, stack, 0, capacity);
       capacity *= 2;
       resize(capacity*2);
@@ -19,7 +19,7 @@ public class ResizingArrayStackOfStrings implements IStackOfStrings {
   }
 
   private void resize(int newCapacity) {
-    String[] copy = new String[newCapacity];
+    Item[] copy = (Item[]) new Object[newCapacity];
 
     for (int i = 0; i < size; i++) {
       copy[i] = stack[i];
@@ -28,8 +28,8 @@ public class ResizingArrayStackOfStrings implements IStackOfStrings {
     stack = copy;
   }
 
-  public String pop() {
-    String item = stack[--size];
+  public Item pop() {
+    Item item = stack[--size];
     stack[size] = null;
 
     if (size > 0 && size == capacity/4) {

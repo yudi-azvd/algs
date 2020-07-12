@@ -1,6 +1,6 @@
 package AlgorithmsPrincetonCourse.Queue;
 
-public class QueueOfStrings implements IQueueOfStrings {
+public class LinkedListQueueOfStrings implements IQueueOfStrings {
   private Node first, last;
 
   private class Node {
@@ -9,7 +9,7 @@ public class QueueOfStrings implements IQueueOfStrings {
   }
 
   public void enqueue(String item) {
-    Node oldLast = last;
+    Node oldLast = last; // agora oldlast é o ante penúltimo
     last = new Node();
 
     last.item = item;

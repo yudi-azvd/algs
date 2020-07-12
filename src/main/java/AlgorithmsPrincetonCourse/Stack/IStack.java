@@ -1,9 +1,9 @@
 package AlgorithmsPrincetonCourse.Stack;
 
-interface IStackOfStrings {
-  public void push(String item);
+interface IStack<Item> {
+  public void push(Item item);
 
-  public String pop();
+  public Item pop();
 
   public boolean isEmpty();
 }
