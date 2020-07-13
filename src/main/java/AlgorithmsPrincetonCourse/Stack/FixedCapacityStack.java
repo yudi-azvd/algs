@@ -7,10 +7,6 @@ public class FixedCapacityStack<Item> implements IStack<Item> {
 
   public void push(Item item) {
     if (size == capacity) {
-      // Item[] tmp = new Item[capacity];
-      // System.arraycopy(stack, 0, tmp, 0, capacity);
-      // stack = new Item[capacity*2];
-      // System.arraycopy(tmp, 0, stack, 0, capacity);
       capacity *= 2;
       resize(capacity*2);
     }
