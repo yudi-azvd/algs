@@ -1,14 +1,14 @@
 package AlgorithmsPrincetonCourse.Queue;
 
-public class LinkedListQueueOfStrings implements IQueueOfStrings {
+public class LinkedListQueue<Item> implements IQueue<Item> {
   private Node first, last;
 
   private class Node {
-    String item;
+    Item item;
     Node next;
   }
 
-  public void enqueue(String item) {
+  public void enqueue(Item item) {
     Node oldLast = last; // agora oldlast é o ante penúltimo
     last = new Node();
 
@@ -23,8 +23,8 @@ public class LinkedListQueueOfStrings implements IQueueOfStrings {
     }
   }
 
-  public String dequeue() {
-    String item = first.item;
+  public Item dequeue() {
+    Item item = first.item;
     first = first.next;
 
     if (isEmpty()) {
