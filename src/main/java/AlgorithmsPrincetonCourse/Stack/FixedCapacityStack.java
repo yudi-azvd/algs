@@ -1,9 +1,9 @@
 package AlgorithmsPrincetonCourse.Stack;
 
+@SuppressWarnings("unchecked")
 public class FixedCapacityStack<Item> implements IStack<Item> {
   private int size = 0;
   private int capacity = 1;
-  @SuppressWarnings("unchecked")
   private Item[] stack = (Item[]) new Object[capacity];
 
   public void push(Item item) {
@@ -15,7 +15,6 @@ public class FixedCapacityStack<Item> implements IStack<Item> {
     stack[size++] = item;
   }
 
-  @SuppressWarnings("unchecked")
   private void resize(int newCapacity) {
     Item[] copy = (Item[]) new Object[newCapacity];
 
