@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Deque",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Assignments.queues.Deque",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - ResizingArrayQueue",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Queue.ResizingArrayQueue",
