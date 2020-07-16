@@ -2,17 +2,22 @@ package AlgorithmsPrincetonCourse.Assignments.queues;
 
 import java.util.NoSuchElementException;
 
-public class Deque<Item> { // implements Iterable<Item> {
+public class LinkedListDeque<Item> 
+  implements 
+    // Iterable<Item>,
+    IDeque<Item> 
+{
   private Node first, last;
   private int size;
   
   private class Node {
     Item item;
+    Node previous;
     Node next;
   }
   
   // construct an empty deque
-  public Deque() {
+  public LinkedListDeque() {
     first = null;
     last = null;
     size = 0;
@@ -35,28 +40,37 @@ public class Deque<Item> { // implements Iterable<Item> {
     Node node = new Node();
     node.item = item;
     node.next = first;
+    node.previous = null;
+
+    if (isEmpty()) {
+      last = node;
+    }
+    else {
+      first.previous = node;
+    }
+
     first = node;
     size++;
   }
 
   // add the item to the back
   public void addLast(Item item) {
-    validate(item);
+    // validate(item);
 
-    Node oldLast = last; // agora oldlast é o ante penúltimo
-    last = new Node();
+    // Node oldLast = last; // agora oldlast é o ante penúltimo
+    // last = new Node();
 
-    last.item = item;
-    last.next = null;
+    // last.item = item;
+    // last.next = null;
 
-    if (isEmpty()) {
-      first = last;
-    }
-    else {
-      oldLast.next = last;
-    }
+    // if (isEmpty()) {
+    //   first = last;
+    // }
+    // else {
+    //   oldLast.next = last;
+    // }
 
-    size++;
+    // size++;
   }
 
   // remove and return the item from the front
@@ -67,6 +81,12 @@ public class Deque<Item> { // implements Iterable<Item> {
 
     Item item = first.item;
     first = first.next;
+
+    if (first != null) {
+      first.previous = null;
+      last = null;
+    }
+
     size--;
 
     return item;
@@ -78,14 +98,14 @@ public class Deque<Item> { // implements Iterable<Item> {
       throw new NoSuchElementException("Cannot call removeLast on an empty deque.");
     }
 
-    Item item = first.item;
-    first = first.next;
+    Item item = last.item;
+    // first = first.next;
 
-    if (isEmpty()) {
-      last = null;
-    }
+    // if (isEmpty()) {
+    //   last = null;
+    // }
 
-    size--;
+    // size--;
 
     return item;
   }
@@ -103,12 +123,13 @@ public class Deque<Item> { // implements Iterable<Item> {
 
   // unit testing (required)
   public static void main(String[] args) {
-    Deque<String> d = new Deque<>();
+    LinkedListDeque<String> d = new LinkedListDeque<>();
 
     d.addFirst("a");
     d.addFirst("b");
 
-    System.out.println(d.removeFirst());
-    System.out.println(d.removeFirst());
+    System.out.println(d.removeLast());
+    // System.out.println(d.removeFirst());
+    // System.out.println(d.removeFirst());
   }
 }

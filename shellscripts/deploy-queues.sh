@@ -5,10 +5,16 @@ cp LinkedListDeque.java ./queues
 
 cd ./queues
 mv LinkedListDeque.java Deque.java
+
+# remove line with
 sed -i '/package AlgorithmsPrincetonCourse.Assignments.queues;/d' ./Deque.java
 
-# search and replace
+
+# replace all "LinkedList" ocurrences  by "Deque"
 # https://stackoverflow.com/questions/525592/find-and-replace-inside-a-text-file-from-a-bash-command
 sed -i -e 's/LinkedListDeque/Deque/g' Deque.java
 
-# make faile executable: chmod +x filename
+# \s means white space
+sed -i -e 's/,\sIDeque<Item>//g' Deque.java
+
+# make file executable: chmod +x filename
