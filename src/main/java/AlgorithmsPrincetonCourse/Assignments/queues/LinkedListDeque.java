@@ -55,22 +55,22 @@ public class LinkedListDeque<Item>
 
   // add the item to the back
   public void addLast(Item item) {
-    // validate(item);
+    validate(item);
 
-    // Node oldLast = last; // agora oldlast é o ante penúltimo
-    // last = new Node();
+    Node oldLast = last; // agora oldlast é o ante penúltimo
+    last = new Node();
 
-    // last.item = item;
-    // last.next = null;
+    last.item = item;
+    last.next = null;
 
-    // if (isEmpty()) {
-    //   first = last;
-    // }
-    // else {
-    //   oldLast.next = last;
-    // }
+    if (isEmpty()) {
+      first = last;
+    }
+    else {
+      oldLast.next = last;
+    }
 
-    // size++;
+    size++;
   }
 
   // remove and return the item from the front
@@ -105,7 +105,7 @@ public class LinkedListDeque<Item>
     //   last = null;
     // }
 
-    // size--;
+    size--;
 
     return item;
   }

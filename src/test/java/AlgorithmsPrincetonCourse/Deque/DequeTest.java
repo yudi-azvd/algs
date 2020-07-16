@@ -40,4 +40,33 @@ public class DequeTest {
       assertEquals(i, size);
     }
   }
+
+  @Test
+  // theLastlyLastAddedShoulAlwaysBeLast ???
+  public void theLastLastlyAddedShoulAlwaysBeLast() {
+    IDeque<Integer> deque = new LinkedListDeque<>();
+    deque.addLast(0);
+    deque.addLast(1);
+    
+    int last = deque.removeLast();
+    
+    assertEquals(1, last);
+    
+    deque = new LinkedListDeque<>();
+
+    int finalSize = 5;
+
+    for (int i = 0; i < finalSize; i++) {
+      deque.addLast(i);
+    }
+
+    // the last is finalSize - 1
+    int size;
+    for (int i = finalSize; i > 0; --i) {
+      last = deque.removeLast();
+      size = deque.size();
+      assertEquals(4, last);
+      assertEquals(i-1, size);
+    }
+  }
 }
