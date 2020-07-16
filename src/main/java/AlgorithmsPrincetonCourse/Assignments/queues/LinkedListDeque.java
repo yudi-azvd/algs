@@ -62,6 +62,7 @@ public class LinkedListDeque<Item>
 
     last.item = item;
     last.next = null;
+    last.previous = oldLast;
 
     if (isEmpty()) {
       first = last;
@@ -99,11 +100,16 @@ public class LinkedListDeque<Item>
     }
 
     Item item = last.item;
-    // first = first.next;
-
-    // if (isEmpty()) {
-    //   last = null;
-    // }
+    
+    if (size == 1) {
+      first = null;
+      last = null;
+    }
+    else if (size > 1) {
+      last = last.previous;
+      // last.next.previous = null; // precisa?
+      last.next = null;
+    }
 
     size--;
 

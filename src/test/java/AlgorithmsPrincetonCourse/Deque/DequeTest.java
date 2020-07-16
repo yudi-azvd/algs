@@ -65,7 +65,7 @@ public class DequeTest {
     for (int i = finalSize; i > 0; --i) {
       last = deque.removeLast();
       size = deque.size();
-      assertEquals(4, last);
+      assertEquals(i-1, last);
       assertEquals(i-1, size);
     }
   }
