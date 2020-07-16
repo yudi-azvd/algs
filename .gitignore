@@ -16,3 +16,5 @@ course-slides/
 src/main/resources/*
 !src/main/resources/.gitkeep
 *.zip
+
+src/main/java/AlgorithmsPrincetonCourse/Assignments/queues/queues
