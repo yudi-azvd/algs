@@ -69,4 +69,21 @@ public class DequeTest {
       assertEquals(i-1, size);
     }
   }
+
+  @Test
+  public void testAddFirstAndRemoveLast() {
+    int numberOfItems = 10;
+    IDeque<Integer> deque = new LinkedListDeque<>();
+
+    for (int i = 1; i <= numberOfItems; i++) {
+      deque.addFirst(i);
+    }
+
+    for (int i = 1; i <= numberOfItems; i++) {
+      int last = deque.removeLast();
+      assertEquals(i, last);
+    }
+
+    // assertEquals(0, 1);
+  }
 }
