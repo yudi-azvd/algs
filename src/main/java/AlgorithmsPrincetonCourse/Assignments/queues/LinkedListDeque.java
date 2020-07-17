@@ -1,19 +1,16 @@
 package AlgorithmsPrincetonCourse.Assignments.queues;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class LinkedListDeque<Item> 
-  implements 
-    // Iterable<Item>,
-    IDeque<Item> 
-{
-  private Node first, last;
+public class LinkedListDeque<Item> implements Iterable<Item>, IDeque<Item> {
+  private Node<Item> first, last;
   private int size;
   
-  private class Node {
+  private static class Node<Item> {
     Item item;
-    Node previous;
-    Node next;
+    Node<Item> previous;
+    Node<Item> next;
   }
   
   // construct an empty deque
@@ -37,7 +34,7 @@ public class LinkedListDeque<Item>
   public void addFirst(Item item) {
     validate(item);
 
-    Node node = new Node();
+    Node<Item> node = new Node<>();
     node.item = item;
     node.next = first;
     node.previous = null;
@@ -57,8 +54,8 @@ public class LinkedListDeque<Item>
   public void addLast(Item item) {
     validate(item);
 
-    Node oldLast = last; // agora oldlast é o ante penúltimo
-    last = new Node();
+    Node<Item> oldLast = last; // agora oldlast é o ante penúltimo
+    last = new Node<Item>();
 
     last.item = item;
     last.next = null;
@@ -123,9 +120,32 @@ public class LinkedListDeque<Item>
   }
 
   // return an iterator over items in order from front to back
-  // public Iterator<Item> iterator() {
-    // return new Iterator
-  // }
+  public Iterator<Item> iterator() {
+    return new ListIterator();
+  }
+
+  private class ListIterator implements Iterator<Item> {
+    private Node<Item> current;
+
+    public boolean hasNext() {
+      return current != null;
+    }
+
+    public Item next() {
+      if (!hasNext()) {
+        throw new NoSuchElementException();
+      }
+
+      Item item = current.item;
+      current = current.next;
+
+      return item;
+    }
+
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+  }
 
   // unit testing (required)
   public static void main(String[] args) {
@@ -135,6 +155,7 @@ public class LinkedListDeque<Item>
     d.addFirst("b");
 
     System.out.println(d.removeLast());
+
     // System.out.println(d.removeFirst());
     // System.out.println(d.removeFirst());
   }

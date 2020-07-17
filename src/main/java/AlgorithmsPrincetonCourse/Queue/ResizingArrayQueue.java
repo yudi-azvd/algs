@@ -23,8 +23,7 @@ public class ResizingArrayQueue<Item> implements IQueue<Item> {
 
   public Item dequeue() {
     if (isEmpty()) {
-      throw new Error("queue is already empty"); // or make it
-                                                 // return null?
+      throw new Error("queue is already empty");
     }
 
     Item item = queue[head];

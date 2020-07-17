@@ -1,7 +1,8 @@
 package AlgorithmsPrincetonCourse.Assignments.queues;
 
+import java.util.Iterator;
 
-public interface IDeque<Item> {// extends Iterable<Item> {
+public interface IDeque<Item> {
     // is the deque empty?
     public boolean isEmpty();
     
@@ -21,5 +22,5 @@ public interface IDeque<Item> {// extends Iterable<Item> {
     public Item removeLast();
     
     // return an iterator over items in order from front to back
-    // public Iterator<Item> iterator();
+    public Iterator<Item> iterator();
   }

@@ -7,7 +7,6 @@ import org.junit.Test;
 import AlgorithmsPrincetonCourse.Assignments.queues.IDeque;
 import AlgorithmsPrincetonCourse.Assignments.queues.LinkedListDeque;
 
-
 public class DequeTest {
   /**
    * LEMBRAR DE REFATORAR TESTES PARA
@@ -83,7 +82,39 @@ public class DequeTest {
       int last = deque.removeLast();
       assertEquals(i, last);
     }
+  }
 
-    // assertEquals(0, 1);
+  @Test
+  public void fillUpAndEmpty() {
+    int numberOfItems = 10;
+    IDeque<Integer> deque = new LinkedListDeque<>();
+
+    for (int i = 1; i <= numberOfItems; i++) {
+      deque.addFirst(i);
+    }
+
+    for (int i = 1; i <= numberOfItems; i++) {
+      deque.removeLast();
+    }
+
+    assertEquals(1, 1);
+
+    for (int i = 1; i <= numberOfItems; i++) {
+      deque.addFirst(i);
+    }
+  }
+
+  @Test
+  public void testDequeIterator() {
+    LinkedListDeque<Integer> deque = new LinkedListDeque<>();
+
+    int i, size = 10;
+    for (i = 0; i < size; i++) {
+      deque.addFirst(i);
+    }
+
+    for (int item : deque) {
+      assertEquals(item, i++);
+    }
   }
 }
