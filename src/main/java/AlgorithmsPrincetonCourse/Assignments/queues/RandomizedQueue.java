@@ -1,11 +1,12 @@
 package AlgorithmsPrincetonCourse.Assignments.queues;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import edu.princeton.cs.algs4.StdRandom;
 
 @SuppressWarnings("unchecked")
-public class RandomizedQueue<Item> {
+public class RandomizedQueue<Item> implements Iterable<Item> {
   private int capacity, head, tail;
   private Item[] queue;
 
@@ -29,6 +30,8 @@ public class RandomizedQueue<Item> {
 
     // add the item
   public void enqueue(Item item) {
+    validate(item);
+
     if (tail == capacity-1) {
       resize(capacity*2);
     }
@@ -68,8 +71,17 @@ public class RandomizedQueue<Item> {
 
   // return a random item (but do not remove it)
   public Item sample() {
+    if (isEmpty()) 
+      throw new NoSuchElementException();
+
     int randomPosition = StdRandom.uniform(head, tail);
     return queue[randomPosition];
+  }
+
+  private void validate(Item item) {
+    if (item == null) {
+      throw new IllegalArgumentException();
+    }
   }
 
   // resize array queue
@@ -94,5 +106,32 @@ public class RandomizedQueue<Item> {
     
     capacity = newCapacity;
     queue = copy;
+  }
+
+  public Iterator<Item> iterator() {
+    return new ArrayIterator();
+  }
+
+  private class ArrayIterator implements Iterator<Item> {
+    private int iteratorSize = tail - head;
+
+    public boolean hasNext() {
+      return iteratorSize > 0;
+    }
+
+    public Item next() {
+      if (iteratorSize == 0)
+        throw new NoSuchElementException();
+
+      int randomPosition = StdRandom.uniform(head, tail);
+      Item item = queue[randomPosition];
+      iteratorSize--;
+      return item;
+    }
+  }
+
+  // [UncommentedEmptyMethodBody]
+  public static void main(String[] args) {
+    
   }
 }

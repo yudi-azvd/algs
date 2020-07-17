@@ -2,6 +2,8 @@ package AlgorithmsPrincetonCourse.Deque;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Iterator;
+
 import org.junit.Test;
 
 import AlgorithmsPrincetonCourse.Assignments.queues.IDeque;
@@ -116,5 +118,35 @@ public class DequeTest {
     for (int item : deque) {
       assertEquals(item, i++);
     }
+  }
+
+  @Test
+  public void test5() {
+    LinkedListDeque<Integer> deque = new LinkedListDeque<>();
+    
+    deque.addLast(1);
+    deque.isEmpty();
+    deque.addLast(3);
+    deque.addLast(4);
+    deque.addLast(5);
+    deque.addLast(6);
+    deque.addLast(7);
+    deque.removeFirst();
+    deque.addLast(9);
+  }
+
+  @Test
+  public void test9() {
+    LinkedListDeque<Integer> deque = new LinkedListDeque<>();
+
+    int n = 10;
+
+    for (int i = 0; i < n; ++i) {
+      deque.addFirst(i);
+    }
+
+    Iterator<Integer> it = deque.iterator();
+
+    System.out.println(it.hasNext());
   }
 }

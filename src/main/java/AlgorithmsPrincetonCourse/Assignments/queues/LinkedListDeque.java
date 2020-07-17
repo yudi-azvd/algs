@@ -22,7 +22,7 @@ public class LinkedListDeque<Item> implements Iterable<Item>, IDeque<Item> {
 
   // is the deque empty?
   public boolean isEmpty() {
-    return first == null;
+    return first == null || last == null;
   }
 
   // return the number of items on the deque
@@ -82,6 +82,8 @@ public class LinkedListDeque<Item> implements Iterable<Item>, IDeque<Item> {
 
     if (first != null) {
       first.previous = null;
+    }
+    else {
       last = null;
     }
 
@@ -125,7 +127,7 @@ public class LinkedListDeque<Item> implements Iterable<Item>, IDeque<Item> {
   }
 
   private class ListIterator implements Iterator<Item> {
-    private Node<Item> current;
+    private Node<Item> current = first;
 
     public boolean hasNext() {
       return current != null;

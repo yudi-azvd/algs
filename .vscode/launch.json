@@ -6,6 +6,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Permutation",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Assignments.queues.Permutation",
+      "projectName": "AlgorithmsPrincetonCourse",
+      "args": "3 < src/main/resources/algs4-data/distinct.txt"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - LinkedListDeque",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Assignments.queues.LinkedListDeque",
