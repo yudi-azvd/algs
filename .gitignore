@@ -18,5 +18,3 @@ src/main/resources/*
 *.zip
 
 outograder-output.txt
-
-src/main/java/AlgorithmsPrincetonCourse/Assignments/queues/queues
