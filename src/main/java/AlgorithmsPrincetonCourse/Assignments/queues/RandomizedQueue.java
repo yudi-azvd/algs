@@ -1,5 +1,6 @@
 package AlgorithmsPrincetonCourse.Assignments.queues;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -62,10 +63,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
   }
 
   private void reformatAt(int randomPosition) {
-    for (int i = randomPosition+1; i < tail; i++) {
+    int i;
+    for (i = randomPosition+1; i < tail; i++) {
       queue[i-1] = queue[i];
     }
-
+    queue[i] = null;
     tail--;
   }
 
@@ -113,19 +115,29 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
   }
 
   private class ArrayIterator implements Iterator<Item> {
-    private int iteratorSize = tail - head;
+    private int iteratorPosition = tail - 1;
+    private Item[] shuffled;
+
+    ArrayIterator() {
+      shuffled = (Item[]) new Object[tail - head];
+      for (int i = head; i < tail; i++) {
+        shuffled[i-head] = queue[i];
+      }
+
+      StdRandom.shuffle(shuffled);
+    }
 
     public boolean hasNext() {
-      return iteratorSize > 0;
+      return iteratorPosition >= head;
     }
 
     public Item next() {
-      if (iteratorSize == 0)
+      if (!hasNext())
         throw new NoSuchElementException();
 
-      int randomPosition = StdRandom.uniform(head, tail);
-      Item item = queue[randomPosition];
-      iteratorSize--;
+      Item item = shuffled[iteratorPosition--];
+      // Item item = shuffled[iteratorPosition];
+      // shuffled[iteratorPosition--] = null;
       return item;
     }
   }
