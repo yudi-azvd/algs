@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - EvaluateExpression",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Stack.Exercises.EvaluateExpression",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - InvertQueueWithStack",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Stack.Exercises.InvertQueueWithStack",
