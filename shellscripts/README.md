@@ -1,4 +1,8 @@
 # Scripts para "deploy"
+Existiam alguns passos para serem feitos manualmente toda vez 
+que eu fazia alguma alteração na tarefa e queria logo em 
+seguida submetê-la na plataforma. Esses scripts foram criados 
+para automatizar esse processo.
 
 ## Como usar
 Certifique-se de estar com o terminal aberto no diretório 
@@ -9,19 +13,16 @@ por exemplo, execute no terminal:
 ./shellscripts/deploy-queues
 ```
 
-Pelo menos em ambiente Linux eles funcionam.
+Só testei esses scripts no Ubuntu, mas devem funcionar em 
+qualquer ambiente Unix.
 
-## Motivação
-Para submeter as tarefas na plataforma do Coursera,
-as classes deviam satisfazer certos requisitos propostos
-pelos professores do curso. Requisitos como: as classes 
-devem estar no pacote padrão, não devem ser utilizadas 
-anotações como `@SupressWarnings` etc.
+## Possíveis melhorias
+- [ ] Incluir no script uma parte que já submete o `.zip` 
+para a plataforma.
 
-Esses scripts foram criados para automatizar o processo 
-de cumprir esses requisitos e comprimir os arquivos em 
-um `.zip` final.
+- [ ] Incluir no script uma parte que copia o conteúdo do resultado do autograder
 
+### Aviso
 Não sou nenhum profissional em bashscript/shellscript, 
 então escrever esses scripts foi um processo de pesquisar 
 no Google o que tinha que ser feito e testar logo em seguida.
