@@ -34,6 +34,7 @@ public class CopyStack {
     return true;
   }
   
+  // inefficient
   public static Stack<String> copyOf(Stack<String> source) {
     Stack<String> copy = new Stack<>();
     Stack<String> secondCopy = new Stack<>();
