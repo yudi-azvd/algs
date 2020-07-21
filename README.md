@@ -1,6 +1,5 @@
 # Algoritmos, curso da Universidade de Princeton
-
-Por enquanto, não há arquivos de teste.
+[Algoritmos I](https://www.coursera.org/learn/algorithms-part1/) no Coursera.
 
 ## Instalação `algs4`
 
