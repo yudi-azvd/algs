@@ -9,6 +9,7 @@ por exemplo, execute no terminal:
 ./shellscripts/deploy-queues
 ```
 
+Pelo menos em ambiente Linux eles funcionam.
 
 ## Motivação
 Para submeter as tarefas na plataforma do Coursera,
