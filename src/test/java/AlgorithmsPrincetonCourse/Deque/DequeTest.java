@@ -116,7 +116,7 @@ public class DequeTest {
     }
 
     for (int item : deque) {
-      assertEquals(item, i++);
+      assertEquals(item, --i);
     }
   }
 

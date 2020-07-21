@@ -46,8 +46,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     int randomPosition = StdRandom.uniform(head, tail);
-    Item item = queue[randomPosition];
-    reformatAt(randomPosition);
+    
+    // swap item at randomPos with item at tail-1
+    Item tmp = queue[randomPosition];
+    queue[randomPosition] = queue[tail-1];
+    queue[tail-1] = tmp;
+
+    Item item = queue[tail-1];
+    queue[--tail] = null;
 
     int size = size();
     if (size > 0 && size == capacity/4) {
@@ -59,15 +65,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     return item;
-  }
-
-  private void reformatAt(int randomPosition) {
-    int i;
-    for (i = randomPosition+1; i < tail; i++) {
-      queue[i-1] = queue[i];
-    }
-    queue[i] = null;
-    tail--;
   }
 
   // return a random item (but do not remove it)
