@@ -6,6 +6,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - CopyStack",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Stack.Exercises.CopyStack",
+      "projectName": "AlgorithmsPrincetonCourse",
+      // "vmArgs": "-ea" // enable vanilla assertion
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - EvaluateExpression",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Stack.Exercises.EvaluateExpression",
