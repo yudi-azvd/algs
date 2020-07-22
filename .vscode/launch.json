@@ -6,11 +6,17 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Josephus",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Queue.Josephus",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - CopyStack",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Stack.Exercises.CopyStack",
-      "projectName": "AlgorithmsPrincetonCourse",
-      // "vmArgs": "-ea" // enable vanilla assertion
+      "projectName": "AlgorithmsPrincetonCourse"
     },
     {
       "type": "java",
