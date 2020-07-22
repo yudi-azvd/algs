@@ -36,35 +36,24 @@ public class TestGeneralizedQueueWithJunitFeatures {
 
   @Test
   public void test() {
-    for (int i = 0; i < 10; i++) {
+    int n = 10;
+
+    for (int i = 0; i < n; i++) {
       queue.insert(i);
     }
 
-    assertEquals(9, queue.delete(9));
-    assertEquals(8, queue.delete(8));
-    assertEquals(7, queue.delete(7));
-    assertEquals(6, queue.delete(6));
-    assertEquals(5, queue.delete(5));
-    assertEquals(4, queue.delete(4));
-    assertEquals(3, queue.delete(3));
-    assertEquals(2, queue.delete(2));
-    assertEquals(1, queue.delete(1));
-    assertEquals(0, queue.delete(0));
+    for (int i = n-1; i >= 0; i--) {
+      assertEquals(i, queue.delete(i));
+    }
 
-    for (int i = 0; i < 10; i++) {
+    n = 5;
+    for (int i = 0; i < n; i++) {
       queue.insert(i);
     }
 
-    assertEquals(9, queue.delete(9));
-    assertEquals(8, queue.delete(8));
-    assertEquals(7, queue.delete(7));
-    assertEquals(6, queue.delete(6));
-    assertEquals(5, queue.delete(5));
-    assertEquals(4, queue.delete(4));
-    assertEquals(3, queue.delete(3));
-    assertEquals(2, queue.delete(2));
-    assertEquals(1, queue.delete(1));
-    assertEquals(0, queue.delete(0));
+    for (int i = n-1; i >= 0; i--) {
+      assertEquals(i, queue.delete(i));
+    }
   }
 }
 
