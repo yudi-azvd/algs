@@ -37,26 +37,7 @@ public class Josephus {
     return eliminatedPeople;
   }
 
-  // public static Queue<Integer> josephus2(final int n, final int m) {
-  //   Queue<Integer> circle = new Queue<>();
-  //   Queue<Integer> backup = new Queue<>();
-  //   Queue<Integer> eliminated = new Queue<>();
-
-  //   fillWithInts(circle, n);
-
-  //   int mCounter = 1;
-  //   while (circle.size() != 1) {
-  //     if (mCounter != m) {
-  //       backup.enqueue(circle.dequeue());
-  //       mCounter = 1;
-  //     }
-  //     else {
-  //       eliminated.enqueue(circle.dequeue());
-  //       mCounter++;
-  //     }
-  //   }
-
-  //   return circle;
+  // public static Queue<Integer> josephus2(int n, int m) {
   // }
 
   public static void main(String[] args) {
