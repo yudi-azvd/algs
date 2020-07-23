@@ -173,6 +173,14 @@ public class LinkedList<Item> implements Iterable<Item> {
     addFirst(item);
   }
 
+  public Item peekFront() {
+    if (isEmpty()) {
+      throw new NoSuchElementException();
+    }
+
+    return first.item;
+  }
+
   private void validate(Item item) {
     if (item == null) {
       throw new IllegalArgumentException("Null argument not accepted.");

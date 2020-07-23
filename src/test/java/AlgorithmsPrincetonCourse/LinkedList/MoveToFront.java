@@ -1,5 +1,6 @@
 package AlgorithmsPrincetonCourse.LinkedList;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.util.Arrays;
@@ -21,6 +22,20 @@ import org.junit.runners.Parameterized.Parameters;
  */
 @RunWith(Parameterized.class)
 public class MoveToFront {
+  public static void main(String[] args) {
+    String characters = "a b c d a b";
+    LinkedList<String> list = new LinkedList<>();
+    Scanner scanner = new Scanner(characters);
+
+    while (scanner.hasNext()) {
+      String character = scanner.next();
+      list.moveToFront(character);
+    }
+
+    System.out.println(list);
+    scanner.close();
+  }  
+
   private static String randomCharacters;
   private static LinkedList<String> list;
   private static Scanner scanner;
@@ -29,7 +44,7 @@ public class MoveToFront {
   @Parameters(name="{index}:{0}")
   public static Iterable<Object[]> data() {
     return Arrays.asList(new Object[][] {
-      {10}, {30}, {50}, {100}
+      { 10 }, { 30 }, { 50 }, { 100 }, { 200 }
     });
   }
 
@@ -59,8 +74,11 @@ public class MoveToFront {
 
     while (scanner.hasNext()) {
       String item = scanner.next();
+
       list.moveToFront(item);
     }
+
+    hashMap = new HashMap<>();
 
     for (String item : list) {
       if (!hashMap.containsKey(item)) {
@@ -68,6 +86,37 @@ public class MoveToFront {
       }
       else {
         assertFalse(true, "duplicate: " + item);
+      }
+    }
+  }
+
+  @Test
+  public void checkOrderWhenDuplicateCharHappens() {
+    scanner = new Scanner(RandomString.generate(n));
+    list = new LinkedList<>();
+
+    HashMap<String, Boolean> hashMap = new HashMap<>();
+
+    boolean checkPreviousIteration = false;
+    String previousItem = null;
+
+    while (scanner.hasNext()) {
+      String item = scanner.next();
+
+      list.moveToFront(item);
+      
+      if (!hashMap.containsKey(item)) {
+        hashMap.put(item, true);
+      }
+      else {
+        checkPreviousIteration = true;
+        previousItem = item;
+      }
+
+      if (checkPreviousIteration) {
+        assertEquals(previousItem, list.peekFront());
+        checkPreviousIteration = false;
+        previousItem = null;
       }
     }
   }
@@ -93,18 +142,4 @@ public class MoveToFront {
       }
     }
   }
-
-  public static void main(String[] args) {
-    String characters = "a b c d a b";
-    LinkedList<String> list = new LinkedList<>();
-    Scanner scanner = new Scanner(characters);
-
-    while (scanner.hasNext()) {
-      String character = scanner.next();
-      list.moveToFront(character);
-    }
-
-    System.out.println(list);
-    scanner.close();
-  }  
 }
