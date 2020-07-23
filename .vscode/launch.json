@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - MoveToFront",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.LinkedList.MoveToFront",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Josephus",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Queue.Josephus",
