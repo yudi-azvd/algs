@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedListQueue<Item> implements IQueue<Item> {
   private Node first, last;
+  private int size;
 
   private class Node {
     private Item item;
@@ -13,6 +14,7 @@ public class LinkedListQueue<Item> implements IQueue<Item> {
   public LinkedListQueue() {
     first = null;
     last = null;
+    size = 0;
   }
 
   public LinkedListQueue(LinkedListQueue<Item> source) {
@@ -41,6 +43,8 @@ public class LinkedListQueue<Item> implements IQueue<Item> {
     else {
       oldLast.next = last;
     }
+
+    size++;
   }
 
   public Item dequeue() {
@@ -51,7 +55,12 @@ public class LinkedListQueue<Item> implements IQueue<Item> {
       last = null;
     }
 
+    size--;
     return item;
+  }
+
+  public int size() {
+    return size;
   }
 
   public Item peek() {
@@ -64,6 +73,32 @@ public class LinkedListQueue<Item> implements IQueue<Item> {
 
   public boolean isEmpty() {
     return first == null;
+  }
+
+  public boolean isCopyOf(LinkedListQueue<Item> that) {
+    if (this.size() != that.size()) {
+      return false;
+    }
+
+    if (this == that) {
+      return false;
+    }
+
+    Node thisNode = this.first;
+    Node thatNode = that.first;
+
+    while (thisNode != null && thatNode != null) {
+      if (thisNode == thatNode)
+        return false;
+
+      if (!thisNode.item.equals(thatNode.item))
+        return false;
+
+      thatNode = thatNode.next;
+      thisNode = thisNode.next;
+    }
+
+    return true;
   }
 
   public boolean equals(LinkedListQueue<Item> that) {

@@ -9,8 +9,6 @@ import org.junit.Test;
  * Problemas Criativos: 1.3.41
  * 
  * Minha solução não segue a dica fornecida na questão.
- * 
- * Como testar que as duas filas são totalmente independentes?
  */
 public class CopyQueueTest {
   @Test
@@ -27,7 +25,6 @@ public class CopyQueueTest {
   
   @Test
   public void testIndepence() {
-    // TODO: esse teste não testa independência
     LinkedListQueue<String> source = new LinkedListQueue<>();
     fillWithStrings(source, 10);
     
@@ -35,18 +32,9 @@ public class CopyQueueTest {
     assertTrue(source != copy);
 
     assertTrue(copy.equals(source));
+
+    assertTrue(copy.isCopyOf(source));
     
-    copy.dequeue();
-    assertTrue(!copy.peek().equals(source.peek()));
-
-    source.dequeue();
-    assertTrue(copy.peek().equals(source.peek()));
-
-    source.dequeue();
-    assertTrue(!copy.peek().equals(source.peek()));
-
-    source.dequeue();
-    assertTrue(!copy.peek().equals(source.peek()));
   }
 
   public void fillWithInts(LinkedListQueue<Integer> queue, int n) {
