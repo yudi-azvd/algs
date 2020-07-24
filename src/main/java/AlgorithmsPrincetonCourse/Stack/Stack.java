@@ -24,11 +24,12 @@ public class Stack<Item> implements IStack<Item> {
       sourceNode = sourceNode.next;
     }
 
+    // se fosse uma lista duplamente encadeada
+    // não precisaria dessa segunda parte
     while (!aux.isEmpty()) {
       aux2.push(aux.pop());
     }
 
-    // TODO: ainda tem que inverter. 
     first = aux2.first;
     // já ta cheirando gambiarra
     size = aux2.size();
