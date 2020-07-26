@@ -2,8 +2,6 @@ package AlgorithmsPrincetonCourse.Stack.Exercises;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.Iterator;
-
 import AlgorithmsPrincetonCourse.Stack.Stack;
 
 /**
