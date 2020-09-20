@@ -6,6 +6,21 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Merge",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Merge",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MergeSort",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.MergeSort",
+      "projectName": "AlgorithmsPrincetonCourse",
+      "vmArgs": "-enableassertions"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - ListingFiles",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Queue.ListingFiles",
