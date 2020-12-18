@@ -6,6 +6,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Example",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Example",
+      "projectName": "AlgorithmsPrincetonCourse",
+      "args": " < tiny.txt"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Merge",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.Merge",
