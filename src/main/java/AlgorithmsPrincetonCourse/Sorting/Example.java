@@ -1,9 +1,6 @@
 // package AlgorithmsPrincetonCourse.Sorting;
 
-// import java.io.File;
-// import java.io.InputStream;
 
-// import edu.princeton.cs.algs4.In;
 // import edu.princeton.cs.algs4.StdOut;
 
 // @SuppressWarnings("unchecked")
@@ -35,14 +32,4 @@
 //     return true;
 //   }
 
-//   public static void main(String[] args) {
-//     StdOut.print("---hey 1");
-
-//     String[] a = In.readStrings();
-    
-//     sort(a);
-//     assert isSorted(a);
-
-//     StdOut.print("---hey 2");
-//   }
 // }
