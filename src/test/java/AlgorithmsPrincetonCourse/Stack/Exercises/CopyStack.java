@@ -6,7 +6,7 @@ import AlgorithmsPrincetonCourse.Stack.Stack;
 
 /**
  * Algorithms 4a ed.
- * Problemas Criativos: 1.3.42
+ * creative-problems: 1.3.42
  */
 public class CopyStack {
   public static void main(String[] args) {

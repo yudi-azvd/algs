@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Queue;
 
 /**
  * Algorithms 4a ed.
- * Problemas Criativos: 1.3.37
+ * creative-problem-1.3.37
  * 
  * Minha solução não segue o comando da questão à risca.
  * N e M são fornecidos no próprio programa em vez de na

@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SomeSolution",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.SomeSolution",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch CountMergeTD",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.CountMergeTD",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch CountMergeBU",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.CountMergeBU",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Merge",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.Merge",

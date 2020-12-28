@@ -22,6 +22,18 @@ Dados de propósito geral: [algs4-data](https://algs4.cs.princeton.edu/code/algs
 Dados para os _assignments_:
 1. [percolation](https://coursera.cs.princeton.edu/algs4/assignments/percolation/percolation.zip)
 
+<!-- 
+https://github.com/reneargento/algorithms-sedgewick-wayne
+
+## Exercícios do livro
+Minhas resoluções foram feitas em `.java` ou em `.txt` 
+- explicar como encontrar esse arquivos em
+-- linux: https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux, ´grep --include=\*.{java,txt}  -rnw './src/test/java' -e 'exercise-2.2.6'´
+-- windows
+-- vscode: ctrl shift f
+usar esse link
+-->
+
 ### Gerenciador de dependências
 Esse projeto foi feito usando Maven como build tool com Visual Studio Code, mas acho que acabei matando uma mosca com um lançador de mísseis.
 

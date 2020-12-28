@@ -16,7 +16,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 /**
  * Algorithms 4a ed.
- * Problemas Criativos: 1.3.40
+ * creative-problems: 1.3.40
  * 
  * Considerando apenas caracteres minúsculos
  */
