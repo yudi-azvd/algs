@@ -6,10 +6,11 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Launch SomeSolution",
+      "name": "Launch ImprovedMerge",
       "request": "launch",
-      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.SomeSolution",
-      "projectName": "AlgorithmsPrincetonCourse"
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.CreativeProblems.ImprovedMerge",
+      "projectName": "AlgorithmsPrincetonCourse",
+      "vmArgs": "-enableassertions"
     },
     {
       "type": "java",

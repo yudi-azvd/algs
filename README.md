@@ -34,6 +34,9 @@ Minhas resoluções foram feitas em `.java` ou em `.txt`
 usar esse link
 -->
 
+# Exercícios
+[Aqui](/src/test/java/AlgorithmsPrincetonCourse/README.md)
+
 ### Gerenciador de dependências
 Esse projeto foi feito usando Maven como build tool com Visual Studio Code, mas acho que acabei matando uma mosca com um lançador de mísseis.
 

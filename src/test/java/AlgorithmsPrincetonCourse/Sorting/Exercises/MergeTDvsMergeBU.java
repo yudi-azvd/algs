@@ -4,9 +4,9 @@ import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
-* <p>exercise-2.2.6
+* <code>exercise-2.2.6</code>
 * 
-* <p>Merge top-down VS Merge bottom-up em termos de quantidade de acessos
+* <p>Merge top-down <i>vs</i> Merge bottom-up em termos de quantidade de acessos
 * ao array. Os dois plots são comparados com o valor 6NlgN.
 */
 public class MergeTDvsMergeBU {
@@ -47,10 +47,10 @@ public class MergeTDvsMergeBU {
   }
   
   private static void plotPoints(
-  int size,
-  int accesssTD, 
-  int accesssBU,
-  double accessTheoretical
+    int size,
+    int accesssTD, 
+    int accesssBU,
+    double accessTheoretical
   ) {
     StdDraw.setPenColor(StdDraw.GRAY);
     StdDraw.point(size, accessTheoretical);
@@ -79,5 +79,7 @@ public class MergeTDvsMergeBU {
 
       plotPoints(size, accesssTD, accesssBU, accessTheoretical);
     }
+
+    StdDraw.save("./.github/compare-merge-td-vs-bu.png");
   }
 }

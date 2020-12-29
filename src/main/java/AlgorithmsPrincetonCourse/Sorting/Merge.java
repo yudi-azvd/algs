@@ -3,7 +3,11 @@ package AlgorithmsPrincetonCourse.Sorting;
 import java.util.Arrays;
 
 /**
- * Versão mais simples do algoritmo Mergesort, sem melhorias.
+ * <p>Versão mais simples do algoritmo Mergesort, sem melhorias.
+ * 
+ * <p>Para uma versão melhorada, cheque 
+ * {@link Sorting.CreativeProblems#ImprovedMerge},
+ * procurando por <code>creative-problem-2.2.11</code>.
  */
 public class Merge {
   public static void merge(int[] a, int[] aux, int lo, int mid, int hi) {
@@ -44,30 +48,6 @@ public class Merge {
 
     assert isSorted(a, lo, hi);
   }
-
-  
-  /**
-   * Usa {@link Insertion#sort(int[], int, int)} para ordenar pequenos 
-   * subarrays. Um nome mais claro seria sortWithInsertionSortCutoff. 
-   * Nesse ponto talvez seja necessário atualizar esse algoritmo quando 
-   * estudar Insertionsort.
-   */
-  // private static void sortWithCutoff(int[] a, int[] aux, int lo, int hi) {
-  //   if (hi <= lo) return;
-
-  //   // if (hi <= lo +  cutoff - 1) {
-  //   //   Insertion.sort(a, lo, hi);
-  //   //   return;
-  //   // }
-
-  //   int mid = (lo + hi)/2;
-  //   sortWithCutoff(a, aux, lo, mid);
-  //   sortWithCutoff(a, aux, mid+1, hi);
-  //   merge(a, aux, lo, mid, hi);
-
-
-  //   assert isSorted(a, lo, hi);
-  // }
 
   public static void sort(int[] a) {
     int[] aux = new int[a.length];

@@ -4,8 +4,8 @@
 // import edu.princeton.cs.algs4.StdOut;
 
 // @SuppressWarnings("unchecked")
-// public class Example {
-//   public static void sort(Comparable[] a) {
+// public class Example implements Comparable<Example> {
+//   public static void sort(Comparable<T>[] a) {
 //     StdOut.println("sorteado");
 //   }
 
