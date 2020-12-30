@@ -12,6 +12,7 @@
 			"**/.settings": true,
 			"**/.factorypath": true
 		},
-		"clock.active": true
+		"clock.active": true,
+		"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
 	}
 }

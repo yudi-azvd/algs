@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch FasterMerge",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.CreativeProblems.FasterMerge",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch ImprovedMerge",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.CreativeProblems.ImprovedMerge",

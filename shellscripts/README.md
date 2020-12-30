@@ -14,7 +14,7 @@ por exemplo, execute no terminal:
 ```
 
 Só testei esses scripts no Ubuntu, mas devem funcionar em 
-qualquer ambiente Unix.
+qualquer ambiente Unix e até mesmo no [WSL](https://docs.microsoft.com/en-us/windows/wsl/) do Windows 10.
 
 ## Possíveis melhorias
 - [ ] Incluir no script uma parte que já submete o `.zip` 
