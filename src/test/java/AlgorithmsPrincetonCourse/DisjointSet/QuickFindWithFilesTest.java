@@ -4,12 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.InputStream;
 import java.util.Scanner;
-
+import org.junit.Ignore;
 import org.junit.Test;
 
 import edu.princeton.cs.algs4.Stopwatch;
 
-
+@Ignore
 public class QuickFindWithFilesTest {
   private InputStream getInputFrom(String filename) {
     return getClass().getClassLoader().getResourceAsStream(filename);

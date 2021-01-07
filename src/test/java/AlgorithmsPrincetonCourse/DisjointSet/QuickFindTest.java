@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 
-
 public class QuickFindTest {
   @Test
   public void connections_should_be_reflexive() {

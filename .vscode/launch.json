@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch BruteCollinearPoints",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Assignments.collinear.BruteCollinearPoints",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch Point",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Assignments.collinear.Point",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch FasterMerge",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.CreativeProblems.FasterMerge",

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 /**
  * Algorithms 4a ed.
- * creative-problems: 1.3.41
+ * creative-problems-1.3.41
  * 
  * Minha solução não segue a dica fornecida na questão.
  */

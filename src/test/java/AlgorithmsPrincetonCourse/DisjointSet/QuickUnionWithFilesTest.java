@@ -2,7 +2,7 @@ package AlgorithmsPrincetonCourse.DisjointSet;
 
 import java.io.InputStream;
 import java.util.Scanner;
-
+import org.junit.Ignore;
 import org.junit.Test;
 
 import edu.princeton.cs.algs4.Stopwatch;
@@ -13,7 +13,7 @@ import edu.princeton.cs.algs4.Stopwatch;
  * WeigthedQuickUnion
  * WeigthedQuickUnionWithCompression
  */
-
+@Ignore
 public class QuickUnionWithFilesTest {
   private InputStream getInputFrom(String filename) {
     return getClass().getClassLoader().getResourceAsStream(filename);
