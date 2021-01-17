@@ -23,17 +23,25 @@ public class PointTest {
     boolean AisLessThanB = A.compareTo(B) == -1;
     assertTrue(AisLessThanB);
 
-    boolean DisGreaterThanB = D.compareTo(B) == 1;
-    assertTrue(DisGreaterThanB);
+    boolean DisLessaThanB = D.compareTo(B) == -1;
+    assertTrue(DisLessaThanB);
 
-    boolean CisGreaterThanA = C.compareTo(A) == 1;
-    assertTrue(CisGreaterThanA);
+    boolean CisLessThanA = C.compareTo(A) == -1;
+    assertTrue(CisLessThanA);
 
     boolean CisLessThanB = C.compareTo(B) == -1;
     assertTrue(CisLessThanB);
 
     boolean CisLessThanD = C.compareTo(D) == -1;
     assertTrue(CisLessThanD);
+  }
+
+  @Test 
+  public void testCompareToAntisymmetricProperty() {
+    Point p = new Point(50, 432);
+    Point q = new Point(118, 270);
+
+    assertEquals(p.compareTo(q), -q.compareTo(p));
   }
 
 

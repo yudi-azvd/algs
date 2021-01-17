@@ -1,17 +1,17 @@
 package AlgorithmsPrincetonCourse.Assignments.collinear;
 
 import java.util.Scanner;
-// import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdOut;
 
-// @Ignore
-public class BruteCollinearPointsTest {
+public class FastCollinearPointsTest {
   @Test
-  public void someTest() {
-    In in = new In("collinear/input8.txt");
-    
+  public void someAnotherTest() {
+    // read the n points from a file
+    In in = new In("collinear/rs1423.txt");
+
     int n = in.readInt();
     Point[] points = new Point[n];
     for (int i = 0; i < n; i++) {
@@ -29,19 +29,16 @@ public class BruteCollinearPointsTest {
     }
     StdDraw.show();
     
-    BruteCollinearPoints collinear = 
-    new BruteCollinearPoints(points);
-    
-    for (LineSegment line : collinear.segments()) {
-      // System.out.println(line);
-      line.draw();
+    // print and draw the line segments
+    FastCollinearPoints collinear = new FastCollinearPoints(points);
+    for (LineSegment segment : collinear.segments()) {
+      // StdOut.println(segment);
+      segment.draw();
     }
+
     StdDraw.show();
-    
-    // único jeito que consegui fazer pra não fechar 
-    // o StdDraw no final do programa.
     Scanner sc = new Scanner(System.in);
     sc.nextLine();
     sc.close();
-  }  
+  }
 }

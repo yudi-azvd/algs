@@ -14,13 +14,16 @@ import java.util.Comparator;
 
 import edu.princeton.cs.algs4.StdDraw;
 
+/**
+ * Testes bobos em {@link PointTest}.
+ */
 public class Point implements Comparable<Point> {
 
     private final int x;     // x-coordinate of this point
     private final int y;     // y-coordinate of this point
 
-    public static Comparator<Point> BY_Y = new ByY();
-    public static Comparator<Point> BY_X = new ByX();
+    // private static Comparator<Point> BY_Y = new ByY();
+    // private static Comparator<Point> BY_X = new ByX();
     // public static Comparator<Point> BY_SLOPE = new BySlope();
 
     /**
@@ -91,7 +94,8 @@ public class Point implements Comparable<Point> {
     public int compareTo(Point that) {
         if (this.x == that.x && this.y == that.y) return 0;
 
-        if (this.y <= that.y && this.x < that.x) 
+        if (this.y < that.y || this.y == that.y && this.x < that.x) 
+        // if (this.y <= that.y && this.x < that.x) 
           return -1;
         return 1;
     }
@@ -103,19 +107,19 @@ public class Point implements Comparable<Point> {
      * @return the Comparator that defines this ordering on points
      */
     public Comparator<Point> slopeOrder() {
-      return new BySlope(this);
+      return new SlopeOrder(this);
     }
 
-    private static class BySlope implements Comparator<Point> {
-      private Point point;
+    private class SlopeOrder implements Comparator<Point> {
+      private final Point p;
 
-      BySlope(Point pt) {
-        point = pt;      
+      SlopeOrder(Point pt) {
+        p = pt;      
       }
 
-      public int compare(Point p, Point q) {
-        double slope1 = point.slopeTo(p);
-        double slope2 = point.slopeTo(q);
+      public int compare(Point q1, Point q2) {
+        double slope1 = p.slopeTo(q1);
+        double slope2 = p.slopeTo(q2);
 
         if (slope1 < slope2) // less
           return -1;
@@ -125,30 +129,28 @@ public class Point implements Comparable<Point> {
       }
     }
 
-    private static class ByY implements Comparator<Point> {
-      // deu certo pra input8 mas cagou input6
-      public int compare(Point p1, Point p2) {
-        if (p1.y == p2.y && p1.x == p2.x)
-          return 0;
-        else if (p1.y < p2.y)
-          return -1;
-        else 
-          return 1;
-      }
-    }
+    // private static class ByY implements Comparator<Point> {
+    //   public int compare(Point p1, Point p2) {
+    //     if (p1.y == p2.y && p1.x == p2.x)
+    //       return 0;
+    //     else if (p1.y < p2.y)
+    //       return -1;
+    //     else 
+    //       return 1;
+    //   }
+    // }
 
-    private static class ByX implements Comparator<Point> {
-      // deu certo pra input8 mas cagou input6
-      public int compare(Point p1, Point p2) {
-        if (p1.y == p2.y && p1.x == p2.x)
-          return 0;
-        else if (p1.x < p2.x)
-          return -1;
-        else 
-          return 1;
-      }
-    }
-
+    // private static class ByX implements Comparator<Point> {
+    //   // deu certo pra input8 mas cagou input6
+    //   public int compare(Point p1, Point p2) {
+    //     if (p1.y == p2.y && p1.x == p2.x)
+    //       return 0;
+    //     else if (p1.x < p2.x)
+    //       return -1;
+    //     else 
+    //       return 1;
+    //   }
+    // }
 
     /**
      * Returns a string representation of this point.

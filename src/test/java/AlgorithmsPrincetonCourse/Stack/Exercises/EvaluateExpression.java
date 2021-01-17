@@ -3,7 +3,6 @@ package AlgorithmsPrincetonCourse.Stack.Exercises;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Stack;
 
-
 public class EvaluateExpression {
   public static void main(String[] args) {
     In in = new In("./algs4-data/evaluate1.txt");

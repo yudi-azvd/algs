@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch FastCollinearPointsTest",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Assignments.collinear.FastCollinearPointsTest",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch BruteCollinearPoints",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Assignments.collinear.BruteCollinearPoints",

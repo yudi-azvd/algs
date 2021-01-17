@@ -3,6 +3,9 @@ package AlgorithmsPrincetonCourse.Stack.Exercises;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * exercise-1.3.5
+ */
 public class BinaryRepresentationOf50 {
   public static void main(String[] args) {
     int N = 50;

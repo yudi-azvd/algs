@@ -5,7 +5,12 @@ import java.util.Arrays;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
+/**
+ * Veja {@link BruteCollinearPointsTest}
+ * para executar a classe.
+ */
 public class BruteCollinearPoints {
+  private int segments;
   private Point[] points;
   private ArrayList<LineSegment> lineSegments;
 
@@ -17,17 +22,21 @@ public class BruteCollinearPoints {
       if (p == null) 
         throw new IllegalArgumentException("Points array must not contain null point");
 
-    // deveria ser verificada também a existência de pontos duplicados
-    // 1. ordenar e checar se há um ponto igual na sequência.
-    // 2. usar hashtable, mas ahco que ainda não pode.
+    Point[] tmpPts = Arrays.copyOf(pts, pts.length);
+    Arrays.sort(tmpPts);
+    for (int i = 1; i < tmpPts.length; i++)
+      if (tmpPts[i].compareTo(tmpPts[i-1]) == 0)
+        throw new IllegalArgumentException("There are duplicate points");
 
-    points = pts;
+    segments = 0;
+    // recomendação do spotbugs em vez de
+    // uma atribuição direta
+    points = Arrays.copyOf(pts, pts.length);
     lineSegments = new ArrayList<>();
-    // int segmentsCounter = numberOfSegments();
-    numberOfSegments();
+    findSegments();
   }  
 
-  public int numberOfSegments() { 
+  private void findSegments() {
     int segmentsCounter = 0;
     double pqSlope, prSlope, psSlope;
     Point p, q, r, s;
@@ -42,7 +51,7 @@ public class BruteCollinearPoints {
             r = points[k];
             s = points[w];
 
-            System.out.print("checking points " + p + q + r + s + '\n');
+            // System.out.print("checking points " + p + q + r + s + '\n');
 
             pqSlope = p.slopeTo(q);
             prSlope = p.slopeTo(r);
@@ -53,28 +62,32 @@ public class BruteCollinearPoints {
               pts[1] = q;
               pts[2] = r;
               pts[3] = s;
-              System.out.print("ARE collinear ");
+              // System.out.print("ARE collinear ");
     
-              // TODO: existe algum jeito mais natural de 
-              // ordenar esse array?
-              Arrays.sort(pts, Point.BY_Y);
-              Arrays.sort(pts, Point.BY_X);
+              // Arrays.sort(pts, Point.BY_Y); // não pode 
+              // Arrays.sort(pts, Point.BY_X); // não pode
+              // Arrays.sort(pts, p.slopeOrder()); // acho que não vai dar certo
+              Arrays.sort(pts);
               LineSegment line = new LineSegment(pts[0], pts[3]);
-              System.out.println(Arrays.toString(pts));
-              System.out.println(line);
-              System.out.println();
+              // System.out.println(Arrays.toString(pts));
+              // System.out.println(line);
+              // System.out.println();
               lineSegments.add(line);
               segmentsCounter++;
             }
-            else {
-              // System.out.println("NOT collinear\n");
-            }
+            // else {
+            //   // System.out.println("NOT collinear\n");
+            // }
           }
         }
       }
     }
 
-    return segmentsCounter; 
+    segments = segmentsCounter;
+  }
+
+  public int numberOfSegments() { 
+    return segments;
   }
 
   public LineSegment[] segments() {
@@ -87,7 +100,7 @@ public class BruteCollinearPoints {
   }
 
   public static void main(String[] args) {
-    In in = new In("collinear/input50.txt");
+    In in = new In("collinear/input400.txt");
 
     int n = in.readInt();
     Point[] points = new Point[n];
@@ -107,7 +120,7 @@ public class BruteCollinearPoints {
     }
     StdDraw.show();
     
-    BruteCollinearPoints collinear = 
+    BruteCollinearPoints collinear =
       new BruteCollinearPoints(points);
     
     for (LineSegment line : collinear.segments()) {
