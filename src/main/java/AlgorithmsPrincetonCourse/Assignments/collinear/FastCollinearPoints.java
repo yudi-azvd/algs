@@ -39,13 +39,13 @@ public class FastCollinearPoints {
       Arrays.sort(points, p.slopeOrder());
 
       for (int j = 0; j < points.length-2; j++) {
-        double pj0Slope = p.slopeTo(points[j]);
-        double pj1Slope = p.slopeTo(points[j+1]);
-        double pj2Slope = p.slopeTo(points[j+2]);
+        double pj0slope = p.slopeTo(points[j]);
+        double pj1slope = p.slopeTo(points[j+1]);
+        double pj2slope = p.slopeTo(points[j+2]);
 
-        if (pj0Slope == pj1Slope && pj1Slope == pj2Slope) {
+        if (pj0slope == pj1slope && pj1slope == pj2slope) {
           ptsInLine[0] = p;
-          ptsInLine[1] = points[j];
+          ptsInLine[1] = points[j+0];
           ptsInLine[2] = points[j+1];
           ptsInLine[3] = points[j+2];
   
@@ -55,9 +55,6 @@ public class FastCollinearPoints {
         }
       }
     }
-
-    System.out.println(lineSegments);
-    System.out.println(lineSegments.size());
 
     segments = lineSegments.size();
   }

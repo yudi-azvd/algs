@@ -1,16 +1,18 @@
 package AlgorithmsPrincetonCourse.Assignments.collinear;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Scanner;
-// import org.junit.Ignore;
+import org.junit.Ignore;
 import org.junit.Test;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
-// @Ignore
+@Ignore
 public class BruteCollinearPointsTest {
   @Test
   public void someTest() {
-    In in = new In("collinear/input8.txt");
+    String filename = "collinear/input40.txt";
+    In in = new In(filename);
     
     int n = in.readInt();
     Point[] points = new Point[n];
@@ -30,16 +32,16 @@ public class BruteCollinearPointsTest {
     StdDraw.show();
     
     BruteCollinearPoints collinear = 
-    new BruteCollinearPoints(points);
+      new BruteCollinearPoints(points);
     
-    for (LineSegment line : collinear.segments()) {
-      // System.out.println(line);
-      line.draw();
+    for (LineSegment segment : collinear.segments()) {
+      segment.draw();
     }
     StdDraw.show();
     
     // único jeito que consegui fazer pra não fechar 
     // o StdDraw no final do programa.
+    System.out.println( "segs:" + collinear.numberOfSegments());
     Scanner sc = new Scanner(System.in);
     sc.nextLine();
     sc.close();

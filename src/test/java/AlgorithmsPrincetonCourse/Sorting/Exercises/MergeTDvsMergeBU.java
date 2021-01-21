@@ -4,11 +4,13 @@ import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
-* <code>exercise-2.2.6</code>
-* 
-* <p>Merge top-down <i>vs</i> Merge bottom-up em termos de quantidade de acessos
-* ao array. Os dois plots são comparados com o valor 6NlgN.
-*/
+ * <code>exercise-2.2.6</code>
+ * 
+ * <p>Merge top-down <i>vs</i> Merge bottom-up em termos de quantidade de acessos
+ * ao array. Os dois plots são comparados com o valor 6NlgN.
+ * 
+ * <p><strong>Ainda tem coisa esquisita</strong>
+ */
 public class MergeTDvsMergeBU {
   private static int[] generateRandomArrayWithSize(int size) {
     int[] arr = new int[size];
