@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ClosestPairOfPoints",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.ClosestPairOfPoints",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch ExerPoint2D",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.ExerPoint2D",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch SortedQueues",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.CreativeProblems.SortedQueues",
