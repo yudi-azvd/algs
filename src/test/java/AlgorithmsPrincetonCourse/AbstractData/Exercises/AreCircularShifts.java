@@ -39,4 +39,19 @@ public class AreCircularShifts {
   public void testCircularShiftsNumbers2() {
     assertFalse(areCircularShifts("1234", "0981"));
   }
+
+  @Test
+  public void testCircularShiftsNumbers22() {
+    assertFalse(areCircularShifts("1234", "12344"));
+  }
+
+  @Test
+  public void testCircularShiftsNumbers3() {
+    assertTrue(areCircularShifts("1234", "2341"));
+  }
+
+  @Test
+  public void testCircularShiftsNumbers4() {
+    assertTrue(areCircularShifts("1234", "1234"));
+  }
 }
