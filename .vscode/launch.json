@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Intersecting1DIntervals",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.Intersecting1DIntervals",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch ClosestPairOfPoints",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.ClosestPairOfPoints",
