@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch StringExperiment2",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.StringExperiment2",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch StringExperiment",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.StringExperiment",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch TopM",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.TopM",
