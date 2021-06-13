@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Rational",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.Rational",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch VisualCounter",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.VisualCounter",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch InstrumentBinarySearch",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.InstrumentBinarySearch",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch InstrumentBinarySearch",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.InstrumentBinarySearch",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch FlipsMax",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.FlipsMax",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch Counter",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Counter",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch StringRecursiveFunction",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.StringRecursiveFunction",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch StringExperiment2",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.StringExperiment2",
