@@ -1,6 +1,5 @@
 package AlgorithmsPrincetonCourse.Assignments.collinear;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Scanner;
 import org.junit.Ignore;
 import org.junit.Test;

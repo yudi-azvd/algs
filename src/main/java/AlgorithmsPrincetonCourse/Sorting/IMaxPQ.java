@@ -1,7 +1,7 @@
 package AlgorithmsPrincetonCourse.Sorting;
 
-public interface MaxPQ<Key extends Comparable<Key>> {
-  void insert(Key[] a);
+public interface IMaxPQ<Key extends Comparable<Key>> {
+  void insert(Key v);
 
   Key max();
 
