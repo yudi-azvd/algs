@@ -54,4 +54,45 @@ public class TestUnorderedArrayMaxPQ {
     pq.insert(-10);
     assertEquals(10, pq.max());
   }
+
+  @Test
+  public void testDelMax() {
+    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    pq.insert(5);
+    pq.insert(1);
+    pq.insert(6);
+    assertEquals(6, pq.delMax());
+    assertEquals(5, pq.delMax());
+    assertEquals(1, pq.delMax());
+    assertTrue(pq.isEmpty());
+  }
+
+  @Test
+  public void testDelMax2() {
+    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    pq.insert(5);
+    pq.insert(1);
+    pq.insert(6);
+    pq.insert(10);
+    pq.insert(6);
+    pq.insert(-10);
+    pq.insert(100);
+    pq.insert(200);
+    
+    assertEquals(200, pq.delMax());
+    assertEquals(100, pq.delMax());
+    assertEquals(10, pq.delMax());
+    assertEquals(6, pq.delMax());
+    assertEquals(4, pq.size());
+
+    assertEquals(6, pq.delMax());
+    assertEquals(5, pq.delMax());
+    assertEquals(1, pq.delMax());
+    assertEquals(-10, pq.delMax());
+    assertTrue(pq.isEmpty());
+    
+    pq.insert(0);
+    assertEquals(0, pq.delMax());
+    assertTrue(pq.isEmpty());
+  }
 }
