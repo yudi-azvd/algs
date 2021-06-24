@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TestOrderedArrayMaxPQ",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.TestOrderedArrayMaxPQ",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch TestUnorderedArrayMaxPQ",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.TestUnorderedArrayMaxPQ",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch Rational",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.AbstractData.Exercises.Rational",

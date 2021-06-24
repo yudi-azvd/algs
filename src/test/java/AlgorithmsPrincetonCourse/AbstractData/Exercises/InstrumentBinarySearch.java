@@ -9,6 +9,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * <code>exercise-1.2.9</code>
  */
+@SuppressWarnings("deprecation")
 public class InstrumentBinarySearch {
   public static int rank(int key, int[] a, Counter counter) { // Array must be sorted.
     int lo = 0;

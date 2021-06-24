@@ -4,9 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.Test;
-// import org.junit.jupiter.api.BeforeAll;
 import AlgorithmsPrincetonCourse.Sorting.IMaxPQ;
-import AlgorithmsPrincetonCourse.Sorting.UnorderedArrayMaxPQ;
+import AlgorithmsPrincetonCourse.Sorting.OrderedArrayMaxPQ;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 
@@ -14,46 +13,43 @@ import edu.princeton.cs.algs4.StdRandom;
 /**
  * <code>exercise-2.4.3</code> unordered array
  */
-public class TestUnorderedArrayMaxPQ {
+public class TestOrderedArrayMaxPQ {
   public static IMaxPQ<Integer> pq;
 
-  // @BeforeAll
-  // public static void setup() {
-  //   IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
-  // }
-
   @Test
-  public void testSizeAsSoonAsConstructed() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<>();
-    assertEquals(0, pq.size());
-    assertTrue(pq.isEmpty());
+  public void testWithSimpleArray() {
+    Integer a[] = {1, 3, 5, 7, 9, 11};
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>(a);
+    assertEquals(a.length, pq.size());
+    assertFalse(pq.isEmpty());
   }
+
 
   @Test
   public void testConstructorWithArray() {
     Integer a[] = {3, 2, 5, 6, 1, 9};
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>(a);
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>(a);
     assertEquals(a.length, pq.size());
     assertFalse(pq.isEmpty());
   }
 
   @Test
   public void testConstructorSettingCapacity() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>(5);
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>(5);
     assertEquals(0, pq.size());
     assertTrue(pq.isEmpty());
   }
 
   @Test
   public void testDefaultConstructor() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
     assertEquals(0, pq.size());
     assertTrue(pq.isEmpty());
   }
 
   @Test
   public void testInsert() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
     pq.insert(5);
     pq.insert(1);
     pq.insert(6);
@@ -61,8 +57,16 @@ public class TestUnorderedArrayMaxPQ {
   }
 
   @Test
+  public void testInsertWithGivenArray() {
+    Integer a[] = {1, 3, 5, 7, 9, 11};
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>(a);
+    pq.insert(6);
+    assertEquals(a.length+1, pq.size());
+  }
+
+  @Test
   public void testMax() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
     pq.insert(5);
     pq.insert(1);
     pq.insert(6);
@@ -75,7 +79,7 @@ public class TestUnorderedArrayMaxPQ {
 
   @Test
   public void testDelMax() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
     pq.insert(5);
     pq.insert(1);
     pq.insert(6);
@@ -87,7 +91,7 @@ public class TestUnorderedArrayMaxPQ {
 
   @Test
   public void testDelMax2() {
-    IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+    IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
     pq.insert(5);
     pq.insert(1);
     pq.insert(6);
@@ -122,18 +126,23 @@ public class TestUnorderedArrayMaxPQ {
     StdDraw.setYscale(0, maxN);
 
     for (int n = 1; n < maxN; n++) {
-      IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+      IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
 
       for (int i = 0; i < n; i++) {
         pq.insert(StdRandom.uniform(100));
       }
 
-      int arrAccess = pq.getArrayAccessCount();
-      int insertions = pq.getInsertionCount();
+      int arrAccess = 0;
+      for (int i = 0; i < n; i++) {
+        pq.delMax();
+      }
+      
+      arrAccess += pq.getArrayAccessCount();
+      int insertions = pq.getInsertionCount(); // del Max count. olhar OrderedArrayMaxPQ
       double amortized = ((double) arrAccess) / insertions;
       System.out.println("-------------------------");
       System.out.println("    arr acc count: " + arrAccess);
-      System.out.println("     insert count: " + insertions);
+      System.out.println("    del max count: " + insertions);
       System.out.println("amortized arr acc: " + ((double) arrAccess) / insertions);
       
       StdDraw.setPenColor(StdDraw.BLACK);
