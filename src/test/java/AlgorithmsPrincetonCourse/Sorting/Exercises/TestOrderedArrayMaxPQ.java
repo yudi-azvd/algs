@@ -126,7 +126,7 @@ public class TestOrderedArrayMaxPQ {
     StdDraw.setYscale(0, maxN);
 
     for (int n = 1; n < maxN; n++) {
-      IMaxPQ<Integer> pq = new OrderedArrayMaxPQ<Integer>();
+      OrderedArrayMaxPQ<Integer> pq = new OrderedArrayMaxPQ<>();
 
       for (int i = 0; i < n; i++) {
         pq.insert(StdRandom.uniform(100));

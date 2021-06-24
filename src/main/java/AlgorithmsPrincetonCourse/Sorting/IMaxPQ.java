@@ -10,8 +10,4 @@ public interface IMaxPQ<Key extends Comparable<Key>> {
   boolean isEmpty();
 
   int size();
-
-  int getInsertionCount();
-
-  int getArrayAccessCount();
 }

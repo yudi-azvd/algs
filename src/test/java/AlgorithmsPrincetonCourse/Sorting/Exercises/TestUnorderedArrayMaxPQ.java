@@ -122,7 +122,7 @@ public class TestUnorderedArrayMaxPQ {
     StdDraw.setYscale(0, maxN);
 
     for (int n = 1; n < maxN; n++) {
-      IMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<Integer>();
+      UnorderedArrayMaxPQ<Integer> pq = new UnorderedArrayMaxPQ<>();
 
       for (int i = 0; i < n; i++) {
         pq.insert(StdRandom.uniform(100));

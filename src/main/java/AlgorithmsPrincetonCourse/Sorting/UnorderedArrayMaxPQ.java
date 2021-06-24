@@ -10,18 +10,18 @@ import java.util.Arrays;
  */
 @SuppressWarnings("unchecked")
 public class UnorderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<Key> {
-  private Object array[];
+  private Key array[];
   private int tail;
   private int insertionCount = 0;
   private int arrayAccessCount = 0;
 
   public UnorderedArrayMaxPQ() {
-    array = new Object[1];
+    array = (Key[]) new Comparable[1];
     tail = 0;
   }
 
   public UnorderedArrayMaxPQ(int capacity) {
-    array = new Object[capacity];
+    array = (Key[]) new Comparable[capacity];
     tail = 0;
   }
 
@@ -36,7 +36,7 @@ public class UnorderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<
     if (size() >= array.length-1) {
       resizeTo(array.length*2);
     }
-    // resizeTo(array.length+1);
+    // resizeTo(array.length+1); // performance muito ruim pra teste
     
     ++arrayAccessCount;
     array[tail++] = v;
@@ -61,7 +61,7 @@ public class UnorderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<
 
     Object[] firstHalf = Arrays.copyOfRange(array, 0, maxIndex); // +N/2
     Object[] secondHalf = Arrays.copyOfRange(array, maxIndex+1, tail); // +N/2
-    array = new Object[array.length];
+    array = (Key[]) new Comparable[array.length];
     // merge first half and second half into array
     System.arraycopy(firstHalf, 0, array, 0, firstHalf.length); // N/2
     System.arraycopy(secondHalf, 0, array, firstHalf.length, secondHalf.length); // N/2
@@ -95,7 +95,7 @@ public class UnorderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<
   }
 
   private void resizeTo(int newSize) {
-    Object[] newArray = new Object[newSize];
+    Key[] newArray = (Key[]) new Comparable[newSize];
     int newArrayIndex = 0;
 
     for (int i = 0; i < tail; ++i, ++newArrayIndex) {

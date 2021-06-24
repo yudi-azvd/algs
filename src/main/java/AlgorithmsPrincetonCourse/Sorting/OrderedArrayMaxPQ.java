@@ -5,18 +5,18 @@ package AlgorithmsPrincetonCourse.Sorting;
  */
 @SuppressWarnings("unchecked")
 public class OrderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<Key> {
-  private Object array[];
+  private Key array[];
   private int tail;
   private int delMaxCount = 0;
   private int arrayAccessCount = 0;
 
   public OrderedArrayMaxPQ() {
     tail = 0;
-    array = new Object[1];
+    array = (Key[]) new Comparable[1];
   }
 
   public OrderedArrayMaxPQ(int capacity) {
-    array = new Object[capacity];
+    array = (Key[]) new Comparable[capacity];
     tail = 0;
   }
 
@@ -93,7 +93,7 @@ public class OrderedArrayMaxPQ<Key extends Comparable<Key>> implements IMaxPQ<Ke
   }
 
   private void resizeTo(int newSize) {
-    Object[] newArray = new Object[newSize];
+    Key[] newArray = (Key[]) new Comparable[newSize];
     int newArrayIndex = 0;
 
     for (int i = 0; i < tail; ++i, ++newArrayIndex) {

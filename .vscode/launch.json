@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TestHeapMaxPQ",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.TestHeapMaxPQ",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch HeapMaxPQ",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Sorting.HeapMaxPQ",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch TestOrderedArrayMaxPQ",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.TestOrderedArrayMaxPQ",
