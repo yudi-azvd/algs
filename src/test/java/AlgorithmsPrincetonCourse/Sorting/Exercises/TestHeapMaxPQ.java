@@ -1,10 +1,8 @@
 package AlgorithmsPrincetonCourse.Sorting.Exercises;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.Test;
-import AlgorithmsPrincetonCourse.Sorting.HeapMaxPQ;
 import AlgorithmsPrincetonCourse.Sorting.HeapMaxPQ;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
