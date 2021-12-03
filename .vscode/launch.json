@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch _4_1_23_BaconHistogram",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.Exercises._4_1_23_BaconHistogram",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch MyDegreesOfSeparation",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Graph.MyDegreesOfSeparation",
