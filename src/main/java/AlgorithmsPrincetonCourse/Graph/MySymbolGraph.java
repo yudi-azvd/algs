@@ -11,12 +11,29 @@ public class MySymbolGraph {
   private String[] keys;
   private Graph g;
 
-  MySymbolGraph(String filename, String delim) {
-    st = new ST<>();
-    In in = new In(filename);
+  public MySymbolGraph(String stream, String sp) {
+    st = new ST<String, Integer>();
 
+    In in = new In(stream);
+    String[] a;
     while (in.hasNextLine()) {
-      StdOut.println(in.readLine());
+      a = in.readLine().split(sp);
+      for (int i = 0; i < a.length; i++)
+        if (!st.contains(a[i]))
+          st.put(a[i], st.size());
+    }
+
+    keys = new String[st.size()];
+    for (String name : st.keys())
+      keys[st.get(name)] = name;
+
+    g = new Graph(st.size());
+    in = new In(stream);
+    while (in.hasNextLine()) {
+      a = in.readLine().split(sp);
+      int v = st.get(a[0]);
+      for (int i = 1; i < a.length; i++)
+        g.addEdge(v, st.get(a[i]));
     }
   }
 
@@ -36,10 +53,9 @@ public class MySymbolGraph {
     return g;
   }
 
-
   public static void main(String[] args) {
-    String filename = "algs4-data/routes.txt";
-    String delim = " ";
+    String filename = "algs4-data/movies.txt";
+    String delim = "/";
 
     MySymbolGraph sg = new MySymbolGraph(filename, delim);
     Graph g = sg.graph();
