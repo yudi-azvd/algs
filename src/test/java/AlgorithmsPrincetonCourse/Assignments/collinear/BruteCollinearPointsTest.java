@@ -2,13 +2,12 @@ package AlgorithmsPrincetonCourse.Assignments.collinear;
 
 import java.util.Scanner;
 import org.junit.Ignore;
-import org.junit.Test;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
 @Ignore
 public class BruteCollinearPointsTest {
-  @Test
+  @Ignore
   public void someTest() {
     String filename = "collinear/input40.txt";
     In in = new In(filename);

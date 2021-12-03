@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MySymbolGraph",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.MySymbolGraph",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch TestHeapMaxPQ",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Sorting.Exercises.TestHeapMaxPQ",

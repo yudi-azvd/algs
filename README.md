@@ -7,6 +7,9 @@
 
 [Como instalar a biblioteca do curso no seu Sistema Operacional](https://algs4.cs.princeton.edu/code/) (depois dos links dos códigos fontes)
 
+Em resumo, você pode seguir os passos desse [comentário](https://github.com/kevin-wayne/algs4/issues/18#issuecomment-449483074) 
+e do comentário.
+
 
 ## Dados de teste
 Baixe os dados nos seguintes links e cole-os diretamente como subdiretórios de `resources/`:

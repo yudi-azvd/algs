@@ -2,13 +2,12 @@ package AlgorithmsPrincetonCourse.Assignments.collinear;
 
 import java.util.Scanner;
 import org.junit.Ignore;
-import org.junit.jupiter.api.Test;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
 @Ignore("What the hell?")
 public class FastCollinearPointsTest {
-  @Test
+  @Ignore
   public void someAnotherTest() {
     // read the n points from a file
     String filename = "collinear/input40.txt";
@@ -21,7 +20,7 @@ public class FastCollinearPointsTest {
       int y = in.readInt();
       points[i] = new Point(x, y);
     }
-    
+
     // draw the points
     StdDraw.enableDoubleBuffering();
     StdDraw.setXscale(0, 32768);
@@ -30,14 +29,14 @@ public class FastCollinearPointsTest {
       p.draw();
     }
     StdDraw.show();
-    
+
     FastCollinearPoints collinear = new FastCollinearPoints(points);
     for (LineSegment segment : collinear.segments()) {
       segment.draw();
     }
     StdDraw.show();
 
-    System.out.println( "segs:" + collinear.numberOfSegments());
+    System.out.println("segs:" + collinear.numberOfSegments());
     Scanner sc = new Scanner(System.in);
     sc.nextLine();
     sc.close();
