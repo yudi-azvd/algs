@@ -37,25 +37,27 @@ public class MySymbolGraph {
     }
   }
 
-  boolean contains(String key) {
+  public boolean contains(String key) {
     return st.contains(key);
   }
 
-  int index(String key) {
+  public int index(String key) {
     return st.get(key);
   }
 
-  String name(int v) {
+  public String name(int v) {
     return keys[v];
   }
 
-  Graph graph() {
+  public Graph graph() {
     return g;
   }
 
   public static void main(String[] args) {
-    String filename = "algs4-data/movies.txt";
-    String delim = "/";
+    // String filename = "algs4-data/movies.txt";
+    // String delim = "/";
+    String filename = args[0];
+    String delim = args[1];
 
     MySymbolGraph sg = new MySymbolGraph(filename, delim);
     Graph g = sg.graph();

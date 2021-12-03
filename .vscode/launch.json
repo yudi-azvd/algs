@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MyDegreesOfSeparation",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.MyDegreesOfSeparation",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch _4_1_22",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.Exercises._4_1_22",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch MySymbolGraph",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Graph.MySymbolGraph",
