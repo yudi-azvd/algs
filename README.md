@@ -11,6 +11,17 @@ Em resumo, você pode seguir os passos desse [comentário](https://github.com/ke
 e do comentário abaixo dele.
 
 
+## Executar programas pelo terminal
+
+Normal:
+
+    mvn compile exec:java -Dexec.mainClass="AlgorithmsPrincetonCourse.Graph.MySymbolGraph"
+
+Dos testes:
+
+    mvn compile exec:java -Dexec.classpathScope="test" -Dexec.mainClass="AlgorithmsPrincetonCourse.Graph.Exercises._4_1_24_CCMovies"
+
+
 ## Dados de teste
 Baixe os dados nos seguintes links e cole-os diretamente como subdiretórios de `resources/`:
 

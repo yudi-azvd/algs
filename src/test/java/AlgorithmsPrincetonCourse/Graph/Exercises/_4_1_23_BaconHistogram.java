@@ -29,8 +29,6 @@ public class _4_1_23_BaconHistogram {
     ST<Integer, Integer> baconHistogram = new ST<>();
     int baconNumber = 0, notConnectedToSource = 0;
     for (String p : performers) {
-      // if (p.toLowerCase().equals("bacon, kevin"))
-      //   StdOut.println(">>> " + p);
       int pv = sg.index(p);
       if (paths.hasPathTo(pv)) {
         baconNumber = paths.distTo(pv) / 2;

@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch iDFSSearch",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.iDFSSearch",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch _4_1_24_CCMovies_test",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.Exercises._4_1_24_CCMovies_test",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch CCBfs",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.CCBfs",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch BfsCC",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.BfsCC",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch _4_1_24_CCMovies",
+      "request": "launch",
+      "mainClass": "AlgorithmsPrincetonCourse.Graph.Exercises._4_1_24_CCMovies",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch _4_1_23_BaconHistogram",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Graph.Exercises._4_1_23_BaconHistogram",

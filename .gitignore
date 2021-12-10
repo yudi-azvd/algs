@@ -16,3 +16,4 @@ course-slides/
 src/main/resources/*
 !src/main/resources/.gitkeep
 *.zip
+tmp
