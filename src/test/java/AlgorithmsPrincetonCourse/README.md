@@ -12,7 +12,7 @@ Minhas resoluções foram feitas em `.java` ou em `.txt`/`.md`.
 ### Linux
 [Referência](https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux)
 
-    `grep --include=\*.{java,txt,md} -rnw './src/test/java' -e 'exercise-2.2.6'`
+    grep --include=\*.{java,txt,md} -rnw './src/test/java' -e 'exercise-2.2.6'
 
 ### Visual Studio Code
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>f</kbd> : "exercise-2.2.6"

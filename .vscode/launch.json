@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch FibonacciTest",
+      "request": "launch",
+      "mainClass": "TestingJunit.FibonacciTest",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch iDFSSearch",
       "request": "launch",
       "mainClass": "AlgorithmsPrincetonCourse.Graph.iDFSSearch",
