@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import AlgorithmsPrincetonCourse.chap01.sec1_5.set.QuickFindDisjointSet;
 
 
 public class QuickFindTest {

@@ -3,7 +3,6 @@ package AlgorithmsPrincetonCourse.chap01.sec1_3.queue;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
-import AlgorithmsPrincetonCourse.chap01.sec1_3.queue.LinkedListQueue;
 
 /**
  * Algorithms 4a ed.

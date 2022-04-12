@@ -9,8 +9,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import AlgorithmsPrincetonCourse.chap01.sec1_3.queue.IGeneralizedQueue;
-import AlgorithmsPrincetonCourse.chap01.sec1_3.queue.LinkedListGeneralizedQueue;
 
 @RunWith(Parameterized.class)
 public class TestGeneralizedQueueWithJunitFeatures {

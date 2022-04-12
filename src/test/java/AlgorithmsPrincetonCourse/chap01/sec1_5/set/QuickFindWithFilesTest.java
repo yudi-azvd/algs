@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.Scanner;
 import org.junit.Ignore;
 import org.junit.Test;
-import AlgorithmsPrincetonCourse.chap01.sec1_5.set.QuickFindDisjointSet;
 import edu.princeton.cs.algs4.Stopwatch;
 
 @Ignore

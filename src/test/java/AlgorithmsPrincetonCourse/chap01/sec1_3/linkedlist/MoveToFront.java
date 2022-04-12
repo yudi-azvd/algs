@@ -13,7 +13,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import AlgorithmsPrincetonCourse.chap01.sec1_3.linkedlist.LinkedList;
 
 /**
  * Algorithms 4a ed.

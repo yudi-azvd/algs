@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.util.Scanner;
 
 import org.junit.Test;
-import AlgorithmsPrincetonCourse.chap01.sec1_5.set.WeightedQuickUnionDisjointSet;
 import edu.princeton.cs.algs4.Stopwatch;
 
 
