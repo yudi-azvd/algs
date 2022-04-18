@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch CCBfs",
+      "request": "launch",
+      "mainClass": "algs.chap04.undirgraph.CCBfs",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
+      "name": "Launch Rational",
+      "request": "launch",
+      "mainClass": "algs.chap01.sec1_2.abstractdata.Exercises.Rational",
+      "projectName": "AlgorithmsPrincetonCourse"
+    },
+    {
+      "type": "java",
       "name": "Launch FibonacciTest",
       "request": "launch",
       "mainClass": "TestingJunit.FibonacciTest",

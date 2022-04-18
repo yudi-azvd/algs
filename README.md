@@ -44,6 +44,9 @@ Dados para os _assignments_:
 
 
 ## Gerenciador de dependências
-Esse projeto foi feito usando Maven como build tool com Visual Studio Code, mas acho que acabei matando uma mosca com um lançador de mísseis.
+Esse projeto foi feito usando Maven como build tool com Visual Studio Code, mas 
+acho que acabei matando uma mosca com um lançador de mísseis.
 
-Acredito que teria sido melhor usar a opção `no build tools` pra criar um projeto Java no VS Code. Se alguém souber como migrar de maven pra _no build tools_, por favor, me fala. 
+Acredito que teria sido melhor usar a opção `no build tools` pra criar um projeto
+Java no VS Code. Se alguém souber como migrar de maven pra _no build tools_, por 
+favor, me fala. 
