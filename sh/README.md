@@ -6,7 +6,7 @@ para automatizar esse processo.
 
 ## Como usar
 Certifique-se de estar com o terminal aberto no diretório 
-raíz do projeto. Para executar o script `deploy-queues`, 
+raíz do projeto. Para executar o script `zip-queues`, 
 por exemplo, execute no terminal:
 
 ```sh
