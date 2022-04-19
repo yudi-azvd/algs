@@ -1,5 +1,9 @@
 # Algoritmos, curso da Universidade de Princeton
+
 [Algoritmos I](https://www.coursera.org/learn/algorithms-part1/) no Coursera.
+
+Meus estudos em estruturas e algoritmos de dados continuam nesse 
+[repositório](https://github.com/yudi-azvd/eda2).
 
 
 ## Dependêcnias
