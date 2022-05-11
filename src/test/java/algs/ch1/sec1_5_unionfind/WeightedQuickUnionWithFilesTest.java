@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.junit.Test;
 import edu.princeton.cs.algs4.Stopwatch;
 
-
+@SuppressWarnings("unused")
 public class WeightedQuickUnionWithFilesTest {
   private InputStream getInputFrom(String filename) {
     return getClass().getClassLoader().getResourceAsStream(filename);
