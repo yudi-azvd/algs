@@ -6,18 +6,23 @@ Meus estudos em estruturas e algoritmos de dados continuam nesse
 [repositório](https://github.com/yudi-azvd/eda2).
 
 
-## Dependêcnias
+## Dependências
 
-- Gradle (acho mais fácil)
-- Maven
+- Maven ou Gradle
 - `algs4` (biblioteca do curso)
 
 [Como instalar a biblioteca do curso no Maven](https://github.com/kevin-wayne/algs4/issues/18#issuecomment-449483074)
 
-[Como instalar a biblioteca do curso no seu Sistema Operacional](https://algs4.cs.princeton.edu/code/) (depois dos links dos códigos fontes)
+[Como instalar a biblioteca do curso no seu Sistema Operacional](https://algs4.cs.princeton.edu/code/)
+(depois dos links dos códigos fontes). Não esqueça de adicionar 
+`export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar` em `~/.bashrc`.
 
-Em resumo, você pode seguir os passos desse [comentário](https://github.com/kevin-wayne/algs4/issues/18#issuecomment-449483074) 
+Em resumo, você pode seguir os passos desse 
+[comentário](https://github.com/kevin-wayne/algs4/issues/18#issuecomment-449483074) 
 e do comentário abaixo dele.
+
+Depois de instalar `algs4` no sistema, execute `Java: clean java language server workspace`
+no VSCode.
 
 ## Executar programas pelo terminal
 

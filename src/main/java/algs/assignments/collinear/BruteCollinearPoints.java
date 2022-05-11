@@ -17,7 +17,7 @@ public class BruteCollinearPoints {
   public BruteCollinearPoints(Point[] pts) {
     if (pts == null)
       throw new IllegalArgumentException("Points array must not be null");
-    
+
     for (Point p : pts)
       if (p == null) 
         throw new IllegalArgumentException("Points array must not contain null point");
