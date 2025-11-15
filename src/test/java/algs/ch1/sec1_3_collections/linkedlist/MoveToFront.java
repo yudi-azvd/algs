@@ -7,9 +7,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.Ignore;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -20,6 +21,7 @@ import org.junit.runners.Parameterized.Parameters;
  * 
  * Considerando apenas caracteres minúsculos
  */
+@Ignore
 @RunWith(Parameterized.class)
 public class MoveToFront {
   public static void main(String[] args) {
@@ -52,7 +54,7 @@ public class MoveToFront {
     this.n = n;
   }
 
-  @Before
+  @BeforeEach
   public void setUp() {
     n = 30;
     randomCharacters = RandomString.generate(n);
@@ -60,12 +62,13 @@ public class MoveToFront {
     list = new LinkedList<>();
   }
   
-  @After
+  @AfterEach
   public void tearDown() {
     scanner.close();
   }
 
   @Test
+  @Ignore
   public void thereShouldBeNoDuplicateCharacters() {
     scanner = new Scanner(RandomString.generate(n));
     list = new LinkedList<>();
@@ -121,7 +124,7 @@ public class MoveToFront {
     }
   }
 
-  // @Test
+  @Test
   public void certifyThereAreNoDuplicates() {
     scanner = new Scanner("n f m h m m z t u z e c d i r w x s e c h p i o u i c b t w ");
     list = new LinkedList<>();

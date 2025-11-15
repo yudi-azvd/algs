@@ -2,12 +2,14 @@
 
 [Algoritmos I](https://www.coursera.org/learn/algorithms-part1/) no Coursera.
 
-Meus estudos em estruturas e algoritmos de dados continuam nesse 
-[repositório](https://github.com/yudi-azvd/eda2).
+Meus estudos em estruturas e algoritmos de dados continuam no repositório
+[eda2](https://github.com/yudi-azvd/eda2).
 
 
 ## Dependências
 
+- Java 17 (mas você pode usar Java 11 mudando `java.sourceCompatibility` para
+`JavaVersion.VERSION_17` em `build.gradle`)
 - Maven ou Gradle
 - `algs4` (biblioteca do curso)
 

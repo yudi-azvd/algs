@@ -8,6 +8,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class MyDegreesOfSeparation {
   public static void main(String[] args) {
     // MySymbolGraph sg = new MySymbolGraph(args[0], args[1]);
+    System.out.println("hey");
     MySymbolGraph sg = new MySymbolGraph("algs4-data/movies.txt", "/");
     String source = "Bacon, Kevin";
     Graph g = sg.graph();

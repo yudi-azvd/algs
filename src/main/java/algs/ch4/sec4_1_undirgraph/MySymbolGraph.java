@@ -54,10 +54,10 @@ public class MySymbolGraph {
   }
 
   public static void main(String[] args) {
-    // String filename = "algs4-data/movies.txt";
-    // String delim = "/";
-    String filename = args[0];
-    String delim = args[1];
+    String filename = "algs4-data/movies.txt";
+    String delim = "/";
+    // String filename = args[0];
+    // String delim = args[1];
 
     MySymbolGraph sg = new MySymbolGraph(filename, delim);
     Graph g = sg.graph();

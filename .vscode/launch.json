@@ -6,6 +6,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MySymbolGraph",
+      "request": "launch",
+      "mainClass": "algs.ch4.sec4_1_undirgraph.MySymbolGraph",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch StringExperiment2",
+      "request": "launch",
+      "mainClass": "algs.ch1.sec1_2_abstractdata.exercises.StringExperiment2",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch MyDegreesOfSeparation",
+      "request": "launch",
+      "mainClass": "algs.ch4.sec4_1_undirgraph.MyDegreesOfSeparation",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch iDFSSearch",
+      "request": "launch",
+      "mainClass": "algs.ch4.sec4_1_undirgraph.iDFSSearch",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch _4_1_22",
+      "request": "launch",
+      "mainClass": "algs.ch4.sec4_1_undirgraph.exercises._4_1_22",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch InstrumentBinarySearch",
+      "request": "launch",
+      "mainClass": "algs.ch1.sec1_2_abstractdata.exercises.InstrumentBinarySearch",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch LG",
+      "request": "launch",
+      "mainClass": "algs.ch1.sec1_1_model.exercises.LG",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch Calculate",
+      "request": "launch",
+      "mainClass": "algs.ch1.sec1_1_model.exercises.Calculate",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
+      "name": "Launch LGl",
+      "request": "launch",
+      "mainClass": "algs.ch1.sec1_1_model.exercises.LGl",
+      "projectName": "algs"
+    },
+    {
+      "type": "java",
       "name": "Launch CCBfs",
       "request": "launch",
       "mainClass": "algs.chap04.undirgraph.CCBfs",
